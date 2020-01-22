@@ -1,7 +1,6 @@
-# Chen-Chien-Lin-550C-Assignment
-# Project Title
+# Chen-Chien-Lin-MECH 550C-Assignment 1
 
-One Paragraph of project description goes here
+This project is for MECH 550C
 
 ## Getting Started
 
