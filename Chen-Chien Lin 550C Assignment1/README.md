@@ -50,7 +50,7 @@ There is no data in this project, thus, no variables shows up in Autos.
 
 ## Running the tests
 
-After compliation, an excutable is created. Double click the excutable to run the application.
+After compliation, an executable is created. Double click the executable to run the application.
 
 ![Visual Studio exe](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudioexe.PNG)
 
