@@ -11,7 +11,12 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+To write C# code, you need Microsoft Visual Studio. Visual Studio comes in different editions:
+Community, Professional and Ultimate.
+As an individual, or a student or a small team, you can download Visual Studio Community Edition
+for free and build your free or paid apps with it. To download Visual Studio Community Edition,
+please visit:
+https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
 ```
 
 ### Installing
