@@ -23,9 +23,11 @@ https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
 
 Step1: Go to Visual Studio page, and download Visual Studio. Users can download different Editions depends on their needs. For students,
 download Visual Studio Community.
+
 ![Visual Studio](visualstudio.PNG)
 
 Step2: After downloading, open Visual Studio Installer, and click to Wrokload. Users can install toolsets they need, and select installation location.
+
 ![Visual Studio Installer](screenshot/visualstudioworkload.PNG)
 
 ```
