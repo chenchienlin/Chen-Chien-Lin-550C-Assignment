@@ -20,11 +20,11 @@ https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
 Step1: Go to Visual Studio page, and download Visual Studio. Users can download different Editions depends on their needs. For students,
 download Visual Studio Community.
 
-![Visual Studio](screenshot/visualstudio.PNG)
+![Visual Studio](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudio.PNG)
 
 Step2: After downloading, open Visual Studio Installer, and click to Wrokload. Users can install toolsets they need, and select installation location.
 
-![Visual Studio Installer](screenshot/visualstudioworkload.PNG)
+![Visual Studio Installer](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudioworkload.PNG)
 
 Step3: After installation, users can launch Visual Studio 2019 Community.
 ![Visual Studio Launch](screenshot/visualstudiolauch.PNG)
