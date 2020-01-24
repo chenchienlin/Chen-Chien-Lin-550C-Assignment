@@ -28,7 +28,7 @@ Say what the step will be
 ```
 Give the example
 ```
-![alt test](Visual Studio.PNG)
+![Visual Studio](visualstudio.PNG)
 
 
 ```
