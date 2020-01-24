@@ -24,68 +24,41 @@ https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
 Step1: Go to Visual Studio page, and download Visual Studio. Users can download different Editions depends on their needs. For students,
 download Visual Studio Community.
 
-![Visual Studio](visualstudio.PNG)
+![Visual Studio](screenshot/visualstudio.PNG)
 
 Step2: After downloading, open Visual Studio Installer, and click to Wrokload. Users can install toolsets they need, and select installation location.
 
 ![Visual Studio Installer](screenshot/visualstudioworkload.PNG)
 
-```
-until finished
-```
+Step3: After installation, users can launch Visual Studio 2019 Community.
+![Visual Studio Launch](screenshot/visualstudiolauch.PNG)
 
-End with an example of getting some data out of the system or using it for a little demo
+### Debugging tools in Visual Studio
+
+After finish coding, users can run their code in the debug mode or run without debug mode.
+
+| Key           | Description           |
+| ------------- |:---------------------:|
+| F5            | Run in the debug mode |
+| Ctrl + F5     | Run without debug     |
+| F9            | Breakpoint            |
+| F10           | Step Over             |
+| F11           | Step Into             |
+
+![Visual Studio Debug](screenshot/visualstudiodebug.PNG)
+
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+After compliation, an excutable is created. Double click the excutable to run the application.
 
-### Break down into end to end tests
+![Visual Studio exe](screenshot/visualstudioexe.PNG)
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+The result of the application will show on the command prompt.
+![Visual Studio exe2](screenshot/visualstudioexe2.PNG)
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Chen-Chien Lin** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
