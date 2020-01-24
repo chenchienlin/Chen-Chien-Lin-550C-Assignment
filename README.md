@@ -29,7 +29,7 @@ Say what the step will be
 Give the example
 ```
 ![alt test](screenshot/Visual Studio.JPG)
-And repeat
+
 
 ```
 until finished
