@@ -47,6 +47,8 @@ After finish coding, users can run their code in the debug mode or run without d
 
 ![Visual Studio Debug](screenshot/visualstudiodebug.PNG)
 
+There is no data in this project, thus, no variables shows up in Autos.
+
 
 ## Running the tests
 
@@ -59,6 +61,4 @@ The result of the application will show on the command prompt.
 
 ## Authors
 
-* **Chen-Chien Lin** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Chen-Chien Lin**
