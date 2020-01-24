@@ -27,7 +27,7 @@ Step2: After downloading, open Visual Studio Installer, and click to Wrokload. U
 ![Visual Studio Installer](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudioworkload.PNG)
 
 Step3: After installation, users can launch Visual Studio 2019 Community.
-![Visual Studio Launch](screenshot/visualstudiolauch.PNG)
+![Visual Studio Launch](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudiolauch.PNG)
 
 ### Debugging tools in Visual Studio
 
@@ -42,7 +42,7 @@ After finish coding, users can run their code in the debug mode or run without d
 | F11           | Step Into             |
 
 <br/>
-![Visual Studio Debug](screenshot/visualstudiodebug.PNG)
+![Visual Studio Debug](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudiodebug.PNG)
 <br/>
 
 There is no data in this project, thus, no variables shows up in Autos.
@@ -52,10 +52,10 @@ There is no data in this project, thus, no variables shows up in Autos.
 
 After compliation, an excutable is created. Double click the excutable to run the application.
 
-![Visual Studio exe](screenshot/visualstudioexe.PNG)
+![Visual Studio exe](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudioexe.PNG)
 
 The result of the application will show on the command prompt.
-![Visual Studio exe2](screenshot/visualstudioexe2.PNG)
+![Visual Studio exe2](https://github.com/x91003502/Chen-Chien-Lin-550C-Assignment/blob/master/screenshot/visualstudioexe2.PNG)
 
 ## Authors
 
