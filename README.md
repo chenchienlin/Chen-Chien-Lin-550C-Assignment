@@ -8,16 +8,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
 To write C# code, you need Microsoft Visual Studio. Visual Studio comes in different editions:
 Community, Professional and Ultimate.
 As an individual, or a student or a small team, you can download Visual Studio Community Edition
 for free and build your free or paid apps with it. To download Visual Studio Community Edition,
 please visit:
 https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
-```
 
 ### Installing
 
@@ -35,7 +31,7 @@ Step3: After installation, users can launch Visual Studio 2019 Community.
 
 ### Debugging tools in Visual Studio
 
-After finish coding, users can run their code in the debug mode or run without debug mode.
+After finish coding, users can run their code in the debug mode or run without debug mode.<br/>
 
 | Key           | Description           |
 | ------------- |:---------------------:|
@@ -45,7 +41,9 @@ After finish coding, users can run their code in the debug mode or run without d
 | F10           | Step Over             |
 | F11           | Step Into             |
 
+<br/>
 ![Visual Studio Debug](screenshot/visualstudiodebug.PNG)
+<br/>
 
 There is no data in this project, thus, no variables shows up in Autos.
 
