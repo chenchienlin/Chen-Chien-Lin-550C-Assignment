@@ -22,7 +22,7 @@ namespace Chen_Chien_Lin_550C_Assignment1
         static void Main(string[] args)
         {
             Console.WriteLine("Always think first, and code later, and try to improve the code after achieve the goal.\n" +
-                "Learn how to write a intuitive, readable, and maintainable code.");
+                "Learn how to write an intuitive, readable, and maintainable code.");
             Console.ReadKey();
         }
     }

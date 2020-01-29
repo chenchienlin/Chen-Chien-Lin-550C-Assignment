@@ -1,0 +1,11 @@
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\bin\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.exe
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\bin\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.deps.json
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\bin\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.runtimeconfig.json
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\bin\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.runtimeconfig.dev.json
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\bin\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.dll
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\bin\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.pdb
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\obj\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.csprojAssemblyReference.cache
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\obj\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.AssemblyInfoInputs.cache
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\obj\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.AssemblyInfo.cs
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\obj\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.dll
+C:\Users\Jack\source\repos\Chen_Chien Lin 550C Assignment2\Chen_Chien Lin 550C Assignment2\obj\Debug\netcoreapp3.1\Chen_Chien Lin 550C Assignment2.pdb

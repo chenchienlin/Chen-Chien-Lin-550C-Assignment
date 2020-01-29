@@ -9,3 +9,14 @@ C:\Users\Jack\source\repos\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C A
 C:\Users\Jack\source\repos\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.AssemblyInfo.cs
 C:\Users\Jack\source\repos\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.dll
 C:\Users\Jack\source\repos\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.pdb
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\bin\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.exe
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\bin\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.deps.json
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\bin\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.runtimeconfig.json
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\bin\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.runtimeconfig.dev.json
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\bin\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.dll
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\bin\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.pdb
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.csprojAssemblyReference.cache
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.AssemblyInfoInputs.cache
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.AssemblyInfo.cs
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.dll
+D:\Users\Jack\Documents\GitHub\Chen-Chien-Lin-550C-Assignment\Chen-Chien Lin 550C Assignment1\Chen-Chien Lin 550C Assignment1\obj\Debug\netcoreapp3.1\Chen-Chien Lin 550C Assignment1.pdb
