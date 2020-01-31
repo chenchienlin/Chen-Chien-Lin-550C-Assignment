@@ -4,24 +4,27 @@ namespace Chen_Chien_Lin_550C_Assignment3
 {
     public class ComplexCalculator
     {
-        public ComplexNumber Add(ComplexNumber complexNumber1, ComplexNumber complexNumber2)
+        private ComplexNumber Add(ComplexNumber complexNumber1, ComplexNumber complexNumber2)
         {
             double newRealPart = complexNumber1.GetRealPart + complexNumber2.GetRealPart;
             double newImaginaryPart = complexNumber1.GetImaginaryPart + complexNumber2.GetImaginaryPart;
             return new ComplexNumber(newRealPart, newImaginaryPart);
         }
+
         public ComplexNumber Mutiply(ComplexNumber complexNumber1, ComplexNumber complexNumber2)
         {
-            double newRealPart = complexNumber1.GetRealPart * complexNumber2.GetRealPart -
-                complexNumber1.GetImaginaryPart * complexNumber2.GetImaginaryPart;
+            double number1RePart = complexNumber1.GetRealPart;
+            double number1ImPart = complexNumber1.GetImaginaryPart;
+            double number2RePart = complexNumber2.GetRealPart;
+            double number2ImPart = complexNumber2.GetImaginaryPart;
 
-            double newImaginaryPart = complexNumber1.GetImaginaryPart * complexNumber2.GetRealPart +
-                complexNumber1.GetRealPart * complexNumber2.GetImaginaryPart;
+            double newRealPart = number1RePart * number2RePart - number1ImPart * number2ImPart;
+            double newImaginaryPart = number1ImPart * number2RePart + number1RePart * number2ImPart;
 
             return new ComplexNumber(newRealPart, newImaginaryPart);
         }
 
-        public ComplexNumber MultiplyArray(ComplexNumber[] array1, ComplexNumber[] array2)
+        private ComplexNumber MultiplyArray(ComplexNumber[] array1, ComplexNumber[] array2)
         {
             if (array1.Length != array2.Length)
             {
@@ -44,7 +47,7 @@ namespace Chen_Chien_Lin_550C_Assignment3
 
             return newComplex;
         }
-
+        
         public ComplexNumber[,] MultipyMatrices(ComplexNumber[,] matrix1, ComplexNumber[,] matrix2)
         {
             ComplexNumber[,] newMatrix = new ComplexNumber[matrix1.GetLength(0), matrix2.GetLength(1)];
@@ -81,6 +84,20 @@ namespace Chen_Chien_Lin_550C_Assignment3
             }
 
             return newArray;
+        }
+        public void PrintMatrix(ComplexNumber[,] matrix)
+        {
+            Console.WriteLine();
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write(String.Format("{0} + {1}i    ",
+                        (decimal)matrix[i, j].GetRealPart, (decimal)matrix[i, j].GetImaginaryPart));
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
         }
     }
 }
