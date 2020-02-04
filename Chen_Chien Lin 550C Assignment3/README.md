@@ -1,8 +1,20 @@
-# Chen-Chien-Lin-MECH 550C-Assignment 2
+# Chen-Chien-Lin-MECH 550C-Assignment 3
 
 This project is for MECH 550C Assignment 2
 
+## Dependency
+.NET
+
 ## Description
+One Complex Number class and one Complex Calculator class are created.
+
+### Complex Number Class
+* There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
+* Fields can be get by two getters, but there is no setter for these two fields.
+* The real part and imaginary part of a complex number need to be defined once by its constructor.
+* No calculation method is defined in this class.
+
+
 One Rectangular class and two instances of the class are created. The size of a rectangular can only be defined once by its constructor.
 A getter is defined to get the value of the area of the rectangular.<br/>
 <br/>
