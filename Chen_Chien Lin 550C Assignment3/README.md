@@ -5,7 +5,7 @@ This project is for MECH 550C Assignment 3
 * Student Number : 46205175
 
 ## Dependency
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/?    utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads)
 * [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows)
 
 ## Description
