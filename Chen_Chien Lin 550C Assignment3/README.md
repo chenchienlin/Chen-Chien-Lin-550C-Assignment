@@ -16,6 +16,14 @@ One Complex Number class and one Complex Calculator class are created.
 * The real part and imaginary part of a complex number can only be defined once by its constructor.
 * No calculation method is defined in this class.
 
+### Complex Calculator Class
+* This is a helper class, there is no field defined in this class.
+* Addition and multiplication of two complex numbers are created.
+* Methods which can perform two arrays and two matrices multiplication are defined in this class.
+** Two input arrays must be made of complex numbers and cannot be null.
+** Two input matrices must be matrices made of complex numbers and cannot be null.
+* A method to display a matrix in a specific pattern is created.
+
 
 One Rectangular class and two instances of the class are created. The size of a rectangular can only be defined once by its constructor.
 A getter is defined to get the value of the area of the rectangular.<br/>
@@ -26,4 +34,4 @@ If the arguments are zero or negative, the program will throw an exception.<br/>
 A static method is defined to compare the areas of two rectangular, and will return boolean value.
 
 ## Author
-* Name : Chen_Chien Lin
+* Chen_Chien Lin
