@@ -4,12 +4,12 @@ This project is for MECH 550C Assignment 3
 * Name : Chen_Chien Lin
 * Student Number : 46205175
 
-## Dependency
+## Dependencies
 * [Visual Studio](https://visualstudio.microsoft.com/downloads)
 * [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows)
 
 ## Description
-One Complex Number class and one Complex Calculator class are created.
+One Complex Number class and one Complex Calculator class are created in this project.
 
 ### Complex Number Class
 * There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
