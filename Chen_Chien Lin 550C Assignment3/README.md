@@ -11,7 +11,7 @@ One Complex Number class and one Complex Calculator class are created.
 ### Complex Number Class
 * There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
 * Fields can be get by two getters, but there is no setter for these two fields.
-* The real part and imaginary part of a complex number need to be defined once by its constructor.
+* The real part and imaginary part of a complex number can only be defined once by its constructor.
 * No calculation method is defined in this class.
 
 
