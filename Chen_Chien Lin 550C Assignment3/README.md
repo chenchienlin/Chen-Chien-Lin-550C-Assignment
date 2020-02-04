@@ -5,7 +5,8 @@ This project is for MECH 550C Assignment 3
 * Student Number : 46205175
 
 ## Dependency
-.NET
+* Visual Studio
+* .NET Core
 
 ## Description
 One Complex Number class and one Complex Calculator class are created.
