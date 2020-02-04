@@ -1,6 +1,8 @@
 # Chen-Chien-Lin-MECH 550C-Assignment 3
 
-This project is for MECH 550C Assignment 2
+This project is for MECH 550C Assignment 3
+* Name : Chen_Chien Lin
+* Student Number : 46205175
 
 ## Dependency
 .NET
@@ -24,4 +26,4 @@ If the arguments are zero or negative, the program will throw an exception.<br/>
 A static method is defined to compare the areas of two rectangular, and will return boolean value.
 
 ## Author
-Chen_Chien Lin
+* Name : Chen_Chien Lin
