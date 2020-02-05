@@ -20,8 +20,8 @@ One Complex Number class and one Complex Calculator class are created in this pr
 ### Complex Calculator Class
 * This is a helper class, there is no field defined in this class.
 * Addition and multiplication of two complex numbers are created.
-* Methods which can perform two arrays and two matrices multiplication are defined in this class.
-* Two input arrays must be made of complex numbers and cannot be null.
+ * Methods which can perform two arrays and two matrices multiplication are defined in this class.
+ * Two input arrays must be made of complex numbers and cannot be null.
 * Two input matrices must be matrices made of complex numbers and cannot be null.
 * A method to display a matrix in a specific pattern is created.
 
