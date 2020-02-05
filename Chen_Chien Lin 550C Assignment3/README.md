@@ -9,7 +9,9 @@ This project is for MECH 550C Assignment 3
 * [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows)
 
 ## Description
-One Complex Number class and one Complex Calculator class are created in this project.
+* A new class is created to defined a complex number.
+* Another class, ComplexCalculator, is created to perform math operation related to complex numbers.
+* Several tests are done in Program class. 
 
 ### Complex Number Class
 1. There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
