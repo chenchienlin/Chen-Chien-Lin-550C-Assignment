@@ -3,7 +3,8 @@
  *                                                                                                               *
  * Name:           Chen-Chien Lin                                                                                *
  * Student Number: 46205175                                                                                      *
- * Purpose:                                                                                                      *
+ * Purpose:        Create a class to perform math operation related to ComplexNumber Class
+ *                                                                                                               *
  * Description:    In this C# script, a helper class is created,                                                 *
  *                 no fields are declared in this class.                                                         *
  *                 The purpose of this class is to calculate complex numbers                                     *
@@ -29,8 +30,8 @@ namespace Chen_Chien_Lin_550C_Assignment3
         public ComplexNumber AddComplex(ComplexNumber complexNumber1, ComplexNumber complexNumber2)
         {
             // Compute and store the real part and imaginary part of the new complex number
-            double newRealPart = complexNumber1.GetRealPart + complexNumber2.GetRealPart;
-            double newImaginaryPart = complexNumber1.GetImaginaryPart + complexNumber2.GetImaginaryPart;
+            double newRealPart = complexNumber1.RealPart + complexNumber2.RealPart;
+            double newImaginaryPart = complexNumber1.ImaginaryPart + complexNumber2.ImaginaryPart;
 
             // Return a new complex number by using the computation results above 
             return new ComplexNumber(newRealPart, newImaginaryPart);
@@ -42,13 +43,13 @@ namespace Chen_Chien_Lin_550C_Assignment3
          * Returns:    One complex number
          */
 
-        public ComplexNumber Mutiply(ComplexNumber complexNumber1, ComplexNumber complexNumber2)
+        public ComplexNumber MutiplyComplex(ComplexNumber complexNumber1, ComplexNumber complexNumber2)
         {
             // Store the real part and imaginary part of two complex numbers as local vairables
-            double number1RePart = complexNumber1.GetRealPart;
-            double number1ImPart = complexNumber1.GetImaginaryPart;
-            double number2RePart = complexNumber2.GetRealPart;
-            double number2ImPart = complexNumber2.GetImaginaryPart;
+            double number1RePart = complexNumber1.RealPart;
+            double number1ImPart = complexNumber1.ImaginaryPart;
+            double number2RePart = complexNumber2.RealPart;
+            double number2ImPart = complexNumber2.ImaginaryPart;
 
             // Compute and store the real part and imaginary part of the new complex number
             double newRealPart = number1RePart * number2RePart - number1ImPart * number2ImPart;
@@ -66,7 +67,7 @@ namespace Chen_Chien_Lin_550C_Assignment3
 
         public ComplexNumber MultiplyComplexArray(ComplexNumber[] array1, ComplexNumber[] array2)
         {
-            // If the dimension of the row vector and the column vector must be match, 
+            // The dimension of the row vector and the column vector must be match, 
             // or the program will throw an IndexOutOfRangeException.
             if (array1.Length != array2.Length)
             {
@@ -85,7 +86,7 @@ namespace Chen_Chien_Lin_550C_Assignment3
                 // or the program will throw an NullReferenceException.
                 try
                 {
-                    newComplex = AddComplex(newComplex, Mutiply(array1[i], array2[i]));
+                    newComplex = AddComplex(newComplex, MutiplyComplex(array1[i], array2[i]));
                 }
                 catch (NullReferenceException)
                 {
@@ -181,8 +182,8 @@ namespace Chen_Chien_Lin_550C_Assignment3
                 {
                     for (int j = 0; j < matrix.GetLength(1); j++)
                     {
-                        Console.Write(String.Format("{0,7}   +{1,7}i    ",
-                            (decimal)matrix[i, j].GetRealPart, (decimal)matrix[i, j].GetImaginaryPart));
+                        Console.Write(String.Format("{0,9}   + {1,9}i    ",
+                            (decimal)matrix[i, j].RealPart, (decimal)matrix[i, j].ImaginaryPart));
                     }
                     Console.WriteLine(Environment.NewLine);
                 }

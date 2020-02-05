@@ -1,15 +1,14 @@
 ﻿/*******************************************************************************************************
- * Assignment 3 :  Complex Number                                                                      *
+ * Assignment 3 :  Complex Number__Program Class                                                       *
  *                                                                                                     *
  * Name:           Chen-Chien Lin                                                                      *
  * Student Number: 46205175                                                                            *
  * Purpose:        Create a new class from scratch and use its instances to perform math operations    *
  *                                                                                                     *
- * Description:    In this C# script, a class is created to defined complex numbers. The real part     *
- *                 and the imaginary part of a complex number must be given to create a instance of    *
- *                 Complex Number class. Once a complex number is created, its value cannot be change  *
- *                 to prevent changing its value accidentally.                                         *
- *                 Users can get the real part and imaginary part through two getters.                 *                             
+ * Description:    In this project, a new class is created to defined a complex number.                *
+ *                 Another class, ComplexCalculator, is created to perform math operation              *
+ *                 related to complex numbers.                                                         *
+ *                 Several tests are done in Program class.                                            *          
  *******************************************************************************************************/
 using System;
 /*************************************** NAMESPACE DECLARATION *****************************************/
@@ -36,21 +35,21 @@ namespace Chen_Chien_Lin_550C_Assignment3
 
 
             //Calculate the result of multiplication
-            var multiplyResult1 = calculator.Mutiply(complexNumber1, complexNumber2);
-            var multiplyResult2 = calculator.Mutiply(complexNumber3, complexNumber4);
+            var multiplyResult1 = calculator.MutiplyComplex(complexNumber1, complexNumber2);
+            var multiplyResult2 = calculator.MutiplyComplex(complexNumber3, complexNumber4);
 
 
             //Print the first multiplication result
             Console.Write(String.Format("{0} + {1}i  Mutiply  {2} + {3}i :  ", 
-                complexNumber1.GetRealPart, complexNumber1.GetImaginaryPart,
-                complexNumber2.GetRealPart, complexNumber2.GetImaginaryPart));
+                complexNumber1.RealPart, complexNumber1.ImaginaryPart,
+                complexNumber2.RealPart, complexNumber2.ImaginaryPart));
             
             multiplyResult1.PrintComplexNumber();
 
             //Print the second multiplication result
             Console.Write(String.Format("{0} + {1}i  Mutiply  {2} + {3}i :  ",
-                complexNumber3.GetRealPart, complexNumber3.GetImaginaryPart,
-                complexNumber4.GetRealPart, complexNumber4.GetImaginaryPart));
+                complexNumber3.RealPart, complexNumber3.ImaginaryPart,
+                complexNumber4.RealPart, complexNumber4.ImaginaryPart));
             
             multiplyResult2.PrintComplexNumber();
 
@@ -59,8 +58,8 @@ namespace Chen_Chien_Lin_550C_Assignment3
 
             //Print addResult1
             Console.Write(String.Format("{0} + {1}i  Add  {2} + {3}i :  ",
-                multiplyResult1.GetRealPart, multiplyResult1.GetImaginaryPart,
-                multiplyResult2.GetRealPart, multiplyResult2.GetImaginaryPart));
+                multiplyResult1.RealPart, multiplyResult1.ImaginaryPart,
+                multiplyResult2.RealPart, multiplyResult2.ImaginaryPart));
 
             addResult1.PrintComplexNumber();
 
@@ -79,7 +78,7 @@ namespace Chen_Chien_Lin_550C_Assignment3
                 {new ComplexNumber(0,4.2), new ComplexNumber(-11.1,0)}
             };
 
-            //Calculate the multiplication result of two matrices
+            //Calculate the multiplication of two 2x2 matrices
             ComplexNumber[,] result1 = calculator.MultipyComplexMatrices(matrix1, matrix2);
 
             //Print the matrix calculated above
@@ -89,50 +88,81 @@ namespace Chen_Chien_Lin_550C_Assignment3
 
             /*====================================== CASE 2 ======================================*/
 
+            //Define two 2x3 matrices
+            ComplexNumber[,] matrix3 = new ComplexNumber[2, 3]
+            {
+                {new ComplexNumber(1,1), new ComplexNumber(2,0), new ComplexNumber(5,-5)},
+                {new ComplexNumber(0,0), new ComplexNumber(2,5), new ComplexNumber(0,4.2)}
+            };
+
+            //Calculate the multiplication of one 2x2 and one 2x3 matrices
+            ComplexNumber[,] result2 = calculator.MultipyComplexMatrices(result1, matrix3);
+
+            //Print the matrix calculated above
+            Console.WriteLine("Result of result1 multiply matrix3");
+            calculator.PrintMatrix(result2);
+
+
+            /*====================================== CASE 3 ======================================*/
+
             //Define two 3x3 matrices
-            ComplexNumber[,] matrix3 = new ComplexNumber[3, 3]
+            ComplexNumber[,] matrix4 = new ComplexNumber[3, 3]
             {
                 {new ComplexNumber(1,1), new ComplexNumber(2,0), new ComplexNumber(2,0)},
                 {new ComplexNumber(0,0), new ComplexNumber(2,5), new ComplexNumber(0,9)},
                 {new ComplexNumber(1,-1), new ComplexNumber(3.7,-4.5), new ComplexNumber(9.5,-3)}
             };
-            ComplexNumber[,] matrix4 = new ComplexNumber[3, 2]
+
+            //Calculate the multiplication of one 2x3 and one 3x3 matrices
+            ComplexNumber[,] result3 = calculator.MultipyComplexMatrices(result2, matrix4);
+
+            //Print the matrix calculated above
+            Console.WriteLine("Result of result2 multiply matrix4");
+            calculator.PrintMatrix(result3);
+
+
+            /*====================================== CASE 4 ======================================*/
+
+            //Define two 3x2 matrices
+            ComplexNumber[,] matrix5 = new ComplexNumber[3, 2]
             {
                 {new ComplexNumber(5,4), new ComplexNumber(2,0)},
                 {new ComplexNumber(0,0), new ComplexNumber(2,5)},
                 {new ComplexNumber(1,-1), new ComplexNumber(3.7,-4.5)}
             };
 
-            /*====================================== CASE 3 ======================================*/
+            //Calculate the multiplication of one 2x3 and one 3x2 matrices
+            ComplexNumber[,] result4 = calculator.MultipyComplexMatrices(result3, matrix5);
 
-
-
-            /*====================================== CASE 4 ======================================*/
-
+            //Print the matrix calculated above
+            Console.WriteLine("Result of result3 multiply matrix5");
+            calculator.PrintMatrix(result4);
 
 
             /*====================================== CASE 5 ======================================*/
 
+            //Define two 2x2 matrices
+            ComplexNumber[,] matrix6 = new ComplexNumber[2, 2]
+            {
+                {new ComplexNumber(0,0), new ComplexNumber(0,0)},
+                {new ComplexNumber(0,0), new ComplexNumber(0,0)}
+            };
 
+            //Calculate the multiplication of the 2x2 matrix obtained in CASE 4 and one 2x2 zero matrix 
+            ComplexNumber[,] result5 = calculator.MultipyComplexMatrices(result4, matrix6);
+
+            //Print the matrix calculated above
+            Console.WriteLine("Result of result4 multiply matrix6");
+            calculator.PrintMatrix(result5);
 
             /*====================================== CASE 6 ======================================*/
 
+            //Calculate the multiplication of the 2x2 zero matrix obtained above and matrix1
+            ComplexNumber[,] result6 = calculator.MultipyComplexMatrices(result5, matrix1);
 
-
-
-            /*====================================== CASE 7 ======================================*/
-
-
-            //ComplexNumber[,] result2 = calculator.MultipyComplexMatrices(matrix3, matrix3);
-            //calculator.PrintMatrix(result2);
-
-            //Define null matrices
-            var matrix5 = new ComplexNumber[2, 3];
-            var matrix6 = new ComplexNumber[3, 4];
-            calculator.PrintMatrix(matrix6);
-
-            //ComplexNumber[,] result3 = calculator.MultipyComplexMatrices(matrix5, matrix6);
-            //calculator.PrintMatrix(result3);
+            //Print the matrix calculated above
+            Console.WriteLine("Result of result5 multiply matrix1");
+            calculator.PrintMatrix(result6);
         }
     }
 }

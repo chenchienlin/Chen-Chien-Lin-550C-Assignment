@@ -1,9 +1,9 @@
 ﻿/*******************************************************************************************************
- * Assignment 3 :  Complex Number Operation__Complex Number Class                                     *
+ * Assignment 3 :  Complex Number Operation__Complex Number Class                                      *
  *                                                                                                     *
  * Name:           Chen-Chien Lin                                                                      *
  * Student Number: 46205175                                                                            *
- * Purpose:        Create a new class from scratch and use its instances to perform math operations    *
+ * Purpose:        Create a new class to define a complex number                                       *
  *                                                                                                     *
  * Description:    In this C# script, a class is created to defined complex numbers. The real part     *
  *                 and the imaginary part of a complex number must be given to create a instance of    *
@@ -38,7 +38,7 @@ namespace Chen_Chien_Lin_550C_Assignment3
          * Returns:    One number which is the real part of a complex number
          */
 
-        public double GetRealPart
+        public double RealPart
         {
             // Getter for the real part of a complex number
             get { return realPart; }
@@ -50,7 +50,7 @@ namespace Chen_Chien_Lin_550C_Assignment3
          * Returns:    One number which is the imaginary part of a complex number
          */
 
-        public double GetImaginaryPart
+        public double ImaginaryPart
         {
             // Getter for the imaginary part of a complex number
             get { return imaginaryPart; }
