@@ -1,6 +1,6 @@
 # Chen-Chien-Lin-MECH 550C-Assignment 3
 
-This project is for MECH 550C Assignment 3
+This project is for MECH 550C Assignment 4
 * Name : Chen_Chien Lin
 * Student Number : 46205175
 
@@ -9,16 +9,17 @@ This project is for MECH 550C Assignment 3
 * [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows)
 
 ## Description
-* A new class is created to defined a complex number.
-* Another class, ComplexCalculator, is created to perform math operation related to complex numbers.
-* Several tests are done in Program class. 
+* A class is created to defined a complex number.
+* Another class, ComplexCalculator, is created to calculate complex numbers arrays and matrices multiplication.
 
 ### Complex Number Class
 1. There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
 2. Fields can be get by two getters, but there is no setter for these two fields.
 3. The real part and imaginary part of a complex number can only be defined once by its constructor.
-4. No calculation method is defined in this class.
-
+4. No Fields are created for the magnitude and phase of a complex number.
+5. Users cannot set a complex number by using its magnitude and phase,
+   but can get the magnitue and phase of one existing complex number by two getters.
+6. Operators + - * are overloaded in this class, users can use these operators to calculate complex numbers directly.
 ### Complex Calculator Class
 1. This is a helper class, there is no field defined in this class.
 2. Addition and multiplication of two complex numbers are created.
