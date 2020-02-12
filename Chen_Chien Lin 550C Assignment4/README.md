@@ -19,11 +19,12 @@ This project is for MECH 550C Assignment 4
 4. No Fields are created for the magnitude and phase of a complex number.
 5. Users cannot set a complex number by using its magnitude and phase,
    but can get the magnitue and phase of one existing complex number by two getters.
-6. Operators + - * are overloaded in this class, users can use these operators to calculate complex numbers directly.
+6. Tostring method inherited from the Object class is overrided to print the specific format for complex numbers.    
+7. Operators + - * are overloaded in this class, users can use these operators to calculate complex numbers directly.
 ### Complex Calculator Class
 1. This is a helper class, there is no field defined in this class.
-2. Addition and multiplication of two complex numbers are created.
-3. Methods which can perform two arrays and two matrices multiplication are defined in this class.<br/>
+2. Methods which can perform two arrays and two matrices multiplication by using operators overloaded in Complex Number class
+   are created in this class.<br/>
 &ensp;Two input arrays must be made of complex numbers and cannot be null.<br/>
 &ensp;Two input matrices must be matrices made of complex numbers and cannot be null.
 4. A method to display a matrix in a specific pattern is created.
