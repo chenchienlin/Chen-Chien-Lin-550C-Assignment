@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ChenChienLin550CAssignment5/1.0.0": {
+        "runtime": {
+          "ChenChienLin550CAssignment5.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ChenChienLin550CAssignment5/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
