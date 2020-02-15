@@ -157,16 +157,19 @@ namespace ChenChienLin550CAssignment5
 
         public override string ToString()
         {
+            double roundRealPart = Math.Round(realPart,4);
+            double roundImaginaryPart = Math.Round(imaginaryPart,4);
+
             if (this.realPart != 0 && this.imaginaryPart > 0) 
             {
-                return String.Format("{0} + {1}i", realPart, imaginaryPart);
+                return String.Format("{0} + {1}i", roundRealPart, roundImaginaryPart);
             }
             if (this.realPart != 0 && this.imaginaryPart < 0)
             {
-                return String.Format("{0} - {1}i", realPart, imaginaryPart*(-1));
+                return String.Format("{0} - {1}i", roundRealPart, roundImaginaryPart * (-1));
             } 
-            if (this.realPart != 0 && this.imaginaryPart == 0) return realPart.ToString();
-            if (this.imaginaryPart != 0) return String.Format("{0}i", imaginaryPart);
+            if (this.realPart != 0 && this.imaginaryPart == 0) return roundRealPart.ToString();
+            if (this.imaginaryPart != 0) return String.Format("{0}i", roundImaginaryPart);
             return "0";
         }
     }

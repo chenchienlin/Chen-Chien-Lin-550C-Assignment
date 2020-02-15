@@ -140,11 +140,13 @@ namespace ChenChienLin550CAssignment5
                 // Display each element in the matrix in a specific format
                 for (int i = 0; i < matrix.GetLength(0); i++)
                 {
+                    Console.Write("[");
                     for (int j = 0; j < matrix.GetLength(1); j++)
                     {
                         Console.Write(String.Format("{0,9}   + {1,9}i    ",
                             (decimal)matrix[i, j].RealPart, (decimal)matrix[i, j].ImaginaryPart));
                     }
+                    Console.Write("]");
                     Console.WriteLine(Environment.NewLine);
                 }
                 Console.WriteLine();
@@ -154,6 +156,32 @@ namespace ChenChienLin550CAssignment5
                 throw new NullReferenceException("Elements in the array(matrix) cannot be null");
             }
             
+        }
+
+        public void PrintMatrix2(ComplexNumber[,] matrix)
+        {
+            try
+            {
+                Console.WriteLine();
+
+                // Display each element in the matrix in a specific format
+                for (int i = 0; i < matrix.GetLength(0); i++)
+                {
+                    Console.Write("[");
+                    for (int j = 0; j < matrix.GetLength(1); j++)
+                    {
+                        Console.Write(matrix[i, j].ToString().PadRight(15));
+                    }
+                    Console.Write("]");
+                    Console.WriteLine(Environment.NewLine);
+                }
+                Console.WriteLine();
+            }
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException("Elements in the array(matrix) cannot be null");
+            }
+
         }
     }
 }
