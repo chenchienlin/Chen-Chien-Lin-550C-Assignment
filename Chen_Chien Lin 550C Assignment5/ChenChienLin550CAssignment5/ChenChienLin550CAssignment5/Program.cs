@@ -8,13 +8,7 @@ namespace ChenChienLin550CAssignment5
         {
 
             var calculator = new ComplexCalculator();
-            ComplexNumber[,] matrix1 = new ComplexNumber[2, 2]
-        {
-                {new ComplexNumber(1.1111111111,1), new ComplexNumber(2.9083920,0)},
-                {new ComplexNumber(0.000001,0), new ComplexNumber(2,532198)}
-        };
             int taskType = calculator.GetTaskType();
-        
 
             switch (taskType)
             {
@@ -26,6 +20,11 @@ namespace ChenChienLin550CAssignment5
                     Console.WriteLine(Environment.NewLine + "Set the second Array!");
                     ComplexNumber[] complexArray2 = calculator.SetComplexArray(vectorSize);
                     calculator.ConfirmArray(complexArray2);
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine(Environment.NewLine + "Result: ");
+                    Console.Write(calculator.MultiplyComplexArray(complexArray1, complexArray2).ToString());
+                    Console.WriteLine();
+                    Console.ResetColor();
                     break;
 
                 case 2:
@@ -39,19 +38,18 @@ namespace ChenChienLin550CAssignment5
                         matrixSize2 = calculator.SetMatrixSize();
                         if (calculator.CanMatch(matrixSize1, matrixSize2)) break;
                     }
-                    //ComplexNumber[,] matrix1 = SetComplexMatrix(matrixSize1);
+                    ComplexNumber[,] matrix1 = calculator.SetComplexMatrix(matrixSize1);
                     calculator.ConfirmeMatrix(matrix1);
                     ComplexNumber[,] matrix2 = calculator.SetComplexMatrix(matrixSize2);
                     calculator.ConfirmeMatrix(matrix2);
-                    var result = calculator.MultipyComplexMatrices(matrix1, matrix2);
-                    calculator.PrintMatrix(result);
-
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine(Environment.NewLine + "Result: ");
+                    calculator.PrintMatrix(calculator.MultipyComplexMatrices(matrix1, matrix2));
+                    Console.ResetColor();
                     break;
             }
+
+            GC.Collect();
         }
-
-
-
-
     }
 }

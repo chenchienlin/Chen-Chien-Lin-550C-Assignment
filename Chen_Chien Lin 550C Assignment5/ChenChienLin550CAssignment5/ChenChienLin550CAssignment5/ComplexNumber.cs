@@ -1,5 +1,5 @@
 ﻿/*******************************************************************************************************
- * Assignment 4 :  Complex Number Operation__Complex Number Class                                      *
+ * Assignment 5 :  Complex Number Operation__Complex Number Class                                      *
  *                                                                                                     *
  * Name:           Chen-Chien Lin                                                                      *
  * Student Number: 46205175                                                                            *
@@ -30,11 +30,26 @@ namespace ChenChienLin550CAssignment5
         private double realPart;
         private double imaginaryPart;
 
+
         // Define a constructor of ComplexNumber class
         public ComplexNumber(double realPart, double imaginaryPart)
         {
             this.realPart = realPart;
             this.imaginaryPart = imaginaryPart;
+        }
+
+        //Define a destructor of ComplexNumber class
+        ~ComplexNumber()
+        {
+            bool isDebug = false;
+            System.Diagnostics.Debug.Assert(isDebug = true);
+
+            if(isDebug)
+            {
+                Console.WriteLine(Environment.NewLine +
+                    "The object is destructed at " + System.DateTime.Now);
+           
+            }
         }
 
         /*==========================================================================
@@ -172,5 +187,6 @@ namespace ChenChienLin550CAssignment5
             if (this.imaginaryPart != 0) return String.Format("{0}i", roundImaginaryPart);
             return "0";
         }
+        
     }
 }

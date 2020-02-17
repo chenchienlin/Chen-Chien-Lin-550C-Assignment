@@ -1,5 +1,5 @@
 ﻿/*****************************************************************************************************************
- * Assignment 4 :  Complex Number Operation__Complex Calculator Class                                            *
+ * Assignment 5 :  Complex Number Operation__Complex Calculator Class                                            *
  *                                                                                                               *
  * Name:           Chen-Chien Lin                                                                                *
  * Student Number: 46205175                                                                                      *
@@ -7,8 +7,8 @@
  *                                                                                                               *
  * Description:    In this C# script, a helper class is created,                                                 *
  *                 no fields are declared in this class.                                                         *
- *                 The purpose of this class is to calculate                                                     *
- *                 arrays and matrices made of complex numbers.                                                  *
+ *                 This class is to calculate arrays and matrices made of complex numbers.                       *
+ *                 This class is reponsable for reading user input.                                              *
  *****************************************************************************************************************/
 
 
@@ -126,59 +126,86 @@ namespace ChenChienLin550CAssignment5
         }
 
         /*======================================================================================================
+         * Function:   PrintArray
+         * Arguments:  One array made of complex numbers
+         * Returns:    None
+         */
+
+        public void PrintArray(ComplexNumber[] complexArray)
+        {
+            //Print an array in a specific format
+            Console.Write("Your array : [ ");
+            foreach (var element in complexArray)
+            {
+                Console.Write(element.ToString() + "  ");
+            }
+            Console.Write(" ] " + Environment.NewLine);
+        }
+
+        /*======================================================================================================
          * Function:   PrintMatrix
          * Arguments:  One matrix made of complex numbers
          * Returns:    None
          */
 
-        public void PrintMatrix(ComplexNumber[,] matrix)
+        public void PrintMatrix(ComplexNumber[,] complexMatrix)
         {
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            //Print a matrix in a specific format
+            for (int i = 0; i < complexMatrix.GetLength(0); i++)
             {
                 Console.Write("[");
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int j = 0; j < complexMatrix.GetLength(1); j++)
                 {
-                    Console.Write(matrix[i, j].ToString().PadRight(15));
+                    Console.Write(complexMatrix[i, j].ToString().PadRight(15));
                 }
-                Console.Write("]");
-                Console.WriteLine(Environment.NewLine);
+                Console.Write("]" + Environment.NewLine);
             }
             Console.WriteLine();
-
         }
 
-        //public void PrintMatrix2(ComplexNumber[,] matrix)
-        //{
-        //    try
-        //    {
-        //        Console.WriteLine();
+        /*======================================================================================================
+         * Function:   SetComplexArray
+         * Arguments:  One integer
+         * Returns:    One array made of  complex numbers
+         */
 
-        //        // Display each element in the matrix in a specific format
-        //        for (int i = 0; i < matrix.GetLength(0); i++)
-        //        {
-        //            Console.Write("[");
-        //            for (int j = 0; j < matrix.GetLength(1); j++)
-        //            {
-        //                Console.Write(matrix[i, j].ToString().PadRight(15));
-        //            }
-        //            Console.Write("]");
-        //            Console.WriteLine(Environment.NewLine);
-        //        }
-        //        Console.WriteLine();
-        //    }
-        //    catch (NullReferenceException)
-        //    {
-        //        throw new NullReferenceException("Elements in the array(matrix) cannot be null");
-        //    }
+        public ComplexNumber[] SetComplexArray(int vectorSize)
+        {
+            //Define a boolean variable
+            bool needHint = true;
 
-        //}
+            //Create a new complex array contains certain element
+            ComplexNumber[] complexArray = new ComplexNumber[vectorSize];
+
+            //Assignment each element in the array
+            for (int i = 0; i < vectorSize; i++)
+            {
+                Console.WriteLine(String.Format("Set the {0} element in the array!", i + 1));
+                complexArray[i] = SetComplexNumber(needHint);
+                needHint = false;
+            }
+
+            //Return new array
+            return complexArray;
+        }
+
+        /*======================================================================================================
+         * Function:   SetComplexMatrix
+         * Arguments:  One array contains integer
+         * Returns:    One matrix made of complex numbers
+         */
 
         public ComplexNumber[,] SetComplexMatrix(int[] matrixSize)
         {
+            //Define local variables
             bool needHint = true;
             int rowNumber = matrixSize[0];
             int colNumber = matrixSize[1];
+
+            //Create a new matrix with certain size
             ComplexNumber[,] matrix = new ComplexNumber[rowNumber, colNumber];
+
+            //Assginment each element in the matrix
             for (int i = 0; i < rowNumber; i++)
             {
                 for (int j = 0; j < colNumber; j++)
@@ -190,51 +217,23 @@ namespace ChenChienLin550CAssignment5
                 }
             }
 
+            //Return new matrix
             return matrix;
         }
 
-        public string[] ReadInput()
-        {
-            return Console.ReadLine().Replace(" ", "").Split(',');
-        }
-
-        public ComplexNumber SetComplexNumber(bool needHint)
-        {
-            do
-            {
-                if (needHint)
-                {
-                    Console.WriteLine("Enter two numeric numbers and seperate them with a comma." +
-                        Environment.NewLine + "Ex:  2,2  or  -2,-2  or  0,2  or  2,0 ");
-                }
-
-                string[] userInput = ReadInput();
-                if (userInput.Length != 2)
-                {
-                    Console.WriteLine("A complex number should contain 2 components." +
-                        "One Real Part and One Imaginary Part");
-                    needHint = true;
-                    continue;
-                }
-                if (!CanConvertToDouble(userInput[0]) || !CanConvertToDouble(userInput[1]))
-                {
-                    Console.WriteLine("Input must be numeric!");
-                    needHint = true;
-                    continue;
-                }
-                else
-                {
-                    return new ComplexNumber(Convert.ToDouble(userInput[0]),
-                                             Convert.ToDouble(userInput[1]));
-                }
-            } while (true);
-        }
+        /*======================================================================================================
+         * Function:   SetVectorSize
+         * Arguments:  None
+         * Returns:    One integer
+         */
 
         public int SetVectorSize()
         {
+            Console.WriteLine("Enter the size of two complex number vectors");
+
             do
             {
-                Console.WriteLine("Enter the size of two complex number vectors");
+                //Read user input
                 string[] userInput = ReadInput();
                 if (userInput.Length != 1)
                 {
@@ -248,6 +247,7 @@ namespace ChenChienLin550CAssignment5
                     continue;
                 }
 
+                //Define a integer 
                 int size = Convert.ToInt32(userInput[0]);
                 if (size <= 0)
                 {
@@ -262,16 +262,26 @@ namespace ChenChienLin550CAssignment5
                     Console.WriteLine("Warning: Your arrays only contain 1 element!");
                     Console.ResetColor();
                 }
-                return Convert.ToInt32(userInput[0]);
+
+                    //Return the integer
+                    return Convert.ToInt32(userInput[0]);
 
             } while (true);
         }
 
+        /*======================================================================================================
+        * Function:   SetMatrixSize
+        * Arguments:  None
+        * Returns:    One integer array
+        */
+
         public int[] SetMatrixSize()
         {
             Console.WriteLine("Enter the size of a matrix");
+
             do
             {
+                //Read user input
                 string[] userInput = ReadInput();
                 if (userInput.Length != 2)
                 {
@@ -284,6 +294,8 @@ namespace ChenChienLin550CAssignment5
                     Console.WriteLine("The size must be numeric and should be integer!");
                     continue;
                 }
+
+                //Define two integer
                 int rownumber = Convert.ToInt32(userInput[0]);
                 int colnumber = Convert.ToInt32(userInput[1]);
                 if (rownumber <= 0 || colnumber <= 0)
@@ -305,16 +317,22 @@ namespace ChenChienLin550CAssignment5
                     Console.WriteLine("Warning: Your matrix only contains 1 column!");
                     Console.ResetColor();
                 }
-                else
-                {
+
+                    //Return one integer array
                     return new int[] { rownumber, colnumber };
-                }
 
             } while (true);
         }
 
+        /*======================================================================================================
+         * Function:   CanMatch
+         * Arguments:  Two integer arrays
+         * Returns:    One boolean
+         */
+
         public bool CanMatch(int[] matrixSize1, int[] matrixSize2)
         {
+            //Test the sizes of two matrices
             if (matrixSize1[1] != matrixSize2[0])
             {
                 Console.WriteLine("The dimensions of two matrices are incorrect!" +
@@ -328,98 +346,87 @@ namespace ChenChienLin550CAssignment5
             return true;
         }
 
-        public bool CanConvertToInt(string userInput)
-        {
-            int n;
-            bool isNumeric = int.TryParse(userInput, out n);
-            return isNumeric;
-        }
-
-        public bool CanConvertToDouble(string userInput)
-        {
-            double n;
-            bool isNumeric = double.TryParse(userInput, out n);
-            return isNumeric;
-        }
-
-        public int GetTaskType()
-        {
-            Console.WriteLine("Which do you want to calculate?" +
-                              Environment.NewLine +
-                              "A. Two Arrays" + Environment.NewLine +
-                              "B. Two Matrices");
-            while (true)
-            {
-                char userInput = Char.ToLower(Console.ReadKey(true).KeyChar);
-                if (userInput == 'a') return 1;
-                if (userInput == 'b') return 2;
-            }
-        }
+        /*======================================================================================================
+         * Function:   ConfirmArray
+         * Arguments:  One array made of complex number
+         * Returns:    void
+         */
 
         public void ConfirmArray(ComplexNumber[] complexArray)
         {
             while (true)
             {
-                Console.Write("Your array : [ ");
-                foreach (var element in complexArray)
-                {
-                    Console.Write(element.ToString() + "  ");
-                }
-                Console.Write(" ] " + Environment.NewLine);
+                //Print array
+                PrintArray(complexArray);
 
                 if (!IsCorrect())
                 {
+                    //Change the specific element in the array
                     ChangeArrayElement(complexArray);
                 }
                 else break;
             }
         }
 
+        /*======================================================================================================
+         * Function:   ConfirmeMatrix
+         * Arguments:  One matrix made of complex number
+         * Returns:    Void
+         */
+
         public void ConfirmeMatrix(ComplexNumber[,] matrix)
         {
             while (true)
             {
-                Console.WriteLine("Your Matrix:");
-                for (int i = 0; i < matrix.GetLength(0); i++)
-                {
-                    Console.Write("[");
-                    for (int j = 0; j < matrix.GetLength(1); j++)
-                    {
-                        Console.Write(matrix[i, j].ToString().PadRight(15));
-                    }
-                    Console.Write("]" + Environment.NewLine);
-                }
-                Console.WriteLine();
+                //Print matrix
+                PrintMatrix(matrix);
 
                 if (!IsCorrect())
                 {
+                    //Change the specific element in the matrix
                     ChangeMatrixElement(matrix);
                 }
                 else break;
             }
         }
 
+        /*======================================================================================================
+         * Function:   IsCorrect
+         * Arguments:  Void
+         * Returns:    Boolean
+         */
+
         public static bool IsCorrect()
         {
             Console.WriteLine("Is it correct? Please select (y/n)!");
             while (true)
             {
+                //Read user input
                 char userInput = Char.ToLower(Console.ReadKey(true).KeyChar);
                 if (userInput == 'y') return true;
                 if (userInput == 'n') return false;
             }
         }
 
+        /*======================================================================================================
+         * Function:   ChangeArrayElement
+         * Arguments:  One array made of complex numbers
+         * Returns:    Void
+         */
+
         public void ChangeArrayElement(ComplexNumber[] array)
         {
-            int elementIndex;
+            //Define local variables
+            int index;
             bool needHint = true;
+
             Console.WriteLine("Which element you want to replace?" +
                               "Enter the index of that element" +
                               Environment.NewLine +
                               "Ex: 1 or 3 or 6...");
             do
             {
+                //Read user input
                 string[] userinput = ReadInput();
                 if (userinput.Length != 1)
                 {
@@ -433,7 +440,8 @@ namespace ChenChienLin550CAssignment5
                     continue;
                 }
 
-                int index = Convert.ToInt32(userinput[0]);
+                //Assign the integer
+                index = Convert.ToInt32(userinput[0]);
                 if (index <= 0)
                 {
                     Console.WriteLine("The index of a vector cannot be or less than zero!");
@@ -449,16 +457,24 @@ namespace ChenChienLin550CAssignment5
                 }
                 else
                 {
-                    elementIndex = index - 1;
+                    index -= 1;
                     break;
                 }
             } while (true);
 
-            array[elementIndex] = SetComplexNumber(needHint);
+            //Reset the specific element in the array
+            array[index] = SetComplexNumber(needHint);
         }
+
+        /*======================================================================================================
+         * Function:   ChangeMatrixElement
+         * Arguments:  One matrix made of complex numbers
+         * Returns:    Void
+         */
 
         public void ChangeMatrixElement(ComplexNumber[,] matrix)
         {
+            //Define local variables
             int rownumber;
             int colnumber;
             bool needHint = true;
@@ -469,6 +485,7 @@ namespace ChenChienLin550CAssignment5
                               "Ex: 1,2  3,4");
             do
             {
+                //Read user input
                 string[] position = ReadInput();
                 if (position.Length != 2)
                 {
@@ -481,6 +498,8 @@ namespace ChenChienLin550CAssignment5
                     Console.WriteLine("The position must be numeric and should be integer!");
                     continue;
                 }
+
+                //Assign two integers
                 rownumber = Convert.ToInt32(position[0]);
                 colnumber = Convert.ToInt32(position[1]);
                 if (rownumber <= 0 || colnumber <= 0)
@@ -510,25 +529,119 @@ namespace ChenChienLin550CAssignment5
                     break;
                 }
             } while (true);
+
+            //Reset the specific element in the matrix
             matrix[rownumber, colnumber] = SetComplexNumber(needHint);
         }
 
-        public ComplexNumber[] SetComplexArray(int vectorSize)
+        /*======================================================================================================
+         * Function:   SetComplexNumber
+         * Arguments:  One boolean
+         * Returns:    One complex number
+         */
+
+        public ComplexNumber SetComplexNumber(bool needHint)
         {
-            bool needHint = true;
-            ComplexNumber[] complexArray = new ComplexNumber[vectorSize];
-            for (int i = 0; i < vectorSize; i++)
+            do
             {
-                Console.WriteLine(String.Format("Set the {0} element in the array!", i + 1));
-                complexArray[i] = SetComplexNumber(needHint);
-                needHint = false;
-            }
-            return complexArray;
+                //Print hint 
+                if (needHint)
+                {
+                    Console.WriteLine("Enter two numeric numbers and seperate them with a comma." +
+                        Environment.NewLine + "Ex:  2,2  or  -2,-2  or  0,2  or  2,0 ");
+                }
+
+                //Read user input
+                string[] userInput = ReadInput();
+                if (userInput.Length != 2)
+                {
+                    Console.WriteLine("A complex number should contain 2 components." +
+                        "One Real Part and One Imaginary Part");
+                    needHint = true;
+                    continue;
+                }
+                if (!CanConvertToDouble(userInput[0]) || !CanConvertToDouble(userInput[1]))
+                {
+                    Console.WriteLine("Input must be numeric!");
+                    needHint = true;
+                    continue;
+                }
+                else
+                {
+                    //Return the complex number set by user
+                    return new ComplexNumber(Convert.ToDouble(userInput[0]),
+                                             Convert.ToDouble(userInput[1]));
+                }
+            } while (true);
         }
 
-        public void PrintMatrix()
-        {
+        /*======================================================================================================
+         * Function:   ReadInput
+         * Arguments:  None
+         * Returns:    One string
+         */
 
+        public string[] ReadInput()
+        {
+            //Return a string
+            return Console.ReadLine().Replace(" ", "").Split(',');
+        }
+
+        /*======================================================================================================
+         * Function:   CanConvertToInt
+         * Arguments:  One string
+         * Returns:    One boolean
+         */
+
+        public bool CanConvertToInt(string userInput)
+        {
+            //Define a local variable
+            int n;
+
+            //Test the type of user input
+            bool isInt = int.TryParse(userInput, out n);
+
+            //Return a boolean value
+            return isInt;
+        }
+
+        /*======================================================================================================
+         * Function:   CanConvertToDouble
+         * Arguments:  One string
+         * Returns:    One boolean
+         */
+
+        public bool CanConvertToDouble(string userInput)
+        {
+            //Define a local variable
+            double n;
+
+            //Test the type of user input
+            bool isDouble = double.TryParse(userInput, out n);
+
+            //Return a boolean value
+            return isDouble;
+        }
+
+        /*======================================================================================================
+         * Function:   GetTaskType
+         * Arguments:  Void
+         * Returns:    One integer
+         */
+
+        public int GetTaskType()
+        {
+            Console.WriteLine("Which do you want to calculate?" +
+                              Environment.NewLine +
+                              "A. Two Arrays" + Environment.NewLine +
+                              "B. Two Matrices");
+            while (true)
+            {
+                //Read user input
+                char userInput = Char.ToLower(Console.ReadKey(true).KeyChar);
+                if (userInput == 'a') return 1;
+                if (userInput == 'b') return 2;
+            }
         }
     }
 }
