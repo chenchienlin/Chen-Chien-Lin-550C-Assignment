@@ -133,13 +133,22 @@ namespace ChenChienLin550CAssignment5
 
         public void PrintArray(ComplexNumber[] complexArray)
         {
-            //Print an array in a specific format
-            Console.Write("Your array : [ ");
-            foreach (var element in complexArray)
+            try
             {
-                Console.Write(element.ToString() + "  ");
+                //Print an array in a specific format
+                Console.Write("Your array : [ ");
+                foreach (var element in complexArray)
+                {
+                    Console.Write(element.ToString() + "  ");
+                }
+                Console.Write(" ] " + Environment.NewLine);
+
             }
-            Console.Write(" ] " + Environment.NewLine);
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException("Elements in the array cannot be null");
+            }
+
         }
 
         /*======================================================================================================
@@ -150,17 +159,26 @@ namespace ChenChienLin550CAssignment5
 
         public void PrintMatrix(ComplexNumber[,] complexMatrix)
         {
-            //Print a matrix in a specific format
-            for (int i = 0; i < complexMatrix.GetLength(0); i++)
+            try
             {
-                Console.Write("[");
-                for (int j = 0; j < complexMatrix.GetLength(1); j++)
+                //Print a matrix in a specific format
+                for (int i = 0; i < complexMatrix.GetLength(0); i++)
                 {
-                    Console.Write(complexMatrix[i, j].ToString().PadRight(15));
+                    Console.Write("[");
+                    for (int j = 0; j < complexMatrix.GetLength(1); j++)
+                    {
+                        Console.Write(complexMatrix[i, j].ToString().PadRight(15));
+                    }
+                    Console.Write("]" + Environment.NewLine);
                 }
-                Console.Write("]" + Environment.NewLine);
+                Console.WriteLine();
+
             }
-            Console.WriteLine();
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException("Elements in the matrix cannot be null");
+            }
+
         }
 
         /*======================================================================================================
@@ -396,7 +414,7 @@ namespace ChenChienLin550CAssignment5
          * Returns:    Boolean
          */
 
-        public static bool IsCorrect()
+        private static bool IsCorrect()
         {
             Console.WriteLine("Is it correct? Please select (y/n)!");
             while (true)
@@ -414,7 +432,7 @@ namespace ChenChienLin550CAssignment5
          * Returns:    Void
          */
 
-        public void ChangeArrayElement(ComplexNumber[] array)
+        private void ChangeArrayElement(ComplexNumber[] array)
         {
             //Define local variables
             int index;
@@ -472,7 +490,7 @@ namespace ChenChienLin550CAssignment5
          * Returns:    Void
          */
 
-        public void ChangeMatrixElement(ComplexNumber[,] matrix)
+        private void ChangeMatrixElement(ComplexNumber[,] matrix)
         {
             //Define local variables
             int rownumber;
@@ -594,7 +612,7 @@ namespace ChenChienLin550CAssignment5
          * Returns:    One boolean
          */
 
-        public bool CanConvertToInt(string userInput)
+        private bool CanConvertToInt(string userInput)
         {
             //Define a local variable
             int n;
@@ -633,7 +651,7 @@ namespace ChenChienLin550CAssignment5
         public int GetTaskType()
         {
             Console.WriteLine("Welcome to complex number calculator" +
-                Environment.NewLine + "Which one do you want to calculate?" +
+                Environment.NewLine + "Which one do you want to multiply?" +
                 Environment.NewLine + "A. Two Arrays" + Environment.NewLine + 
                 "B. Two Matrices");
             while (true)

@@ -106,6 +106,7 @@ namespace ChenChienLin550CAssignment5
 
             //Call garbage collection
             GC.Collect();
+            Console.ReadKey();
         }
     }
 }
