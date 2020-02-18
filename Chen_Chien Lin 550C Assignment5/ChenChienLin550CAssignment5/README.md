@@ -12,7 +12,7 @@ This project is for MECH 550C Assignment 5
 1. Double click ChenChienLin550CAssignment5.exe.
 2. Choose your task. A. two arrays multiplication / B. two matrices multiplication 
 3. Enter the size of arrays / matrices. These numbers should be positive integers.
-4. Set each element in the arrays / matrices. Enter two numbers represent the real part and imaginary part and seperate them with a      comma.
+4. Set each element in the arrays / matrices. Enter two numbers represent the real part and imaginary part and seperate them with a comma.
 
 ## Description
 * A class is created to defined a complex number.
@@ -28,6 +28,7 @@ This project is for MECH 550C Assignment 5
    but can get the magnitue and phase of one existing complex number by two getters.
 7. **Tostring** method inherited from the Object class is overrided to print the specific format for complex numbers.    
 8. Operators + - * are overloaded in this class, users can use these operators to calculate complex numbers directly.
+
 ### Complex Calculator Class
 1. This is a helper class, there is no field defined in this class.
 2. Methods which can perform two arrays and two matrices multiplication by using operators overloaded in Complex Number class
@@ -37,5 +38,6 @@ This project is for MECH 550C Assignment 5
 4. A method to display a matrix in a specific pattern is created.
 5. Two methods are created to help users set the size of an array and a matrix, respectively.
 6. Two methods are created to help users set the elements in an array and in a matrix, respectively.
+
 ## Author
 * Chen_Chien Lin
