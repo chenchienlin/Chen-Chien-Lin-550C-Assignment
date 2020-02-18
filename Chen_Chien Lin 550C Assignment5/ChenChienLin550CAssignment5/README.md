@@ -16,7 +16,7 @@ This project is for MECH 550C Assignment 5
 
 ## Description
 * A class is created to defined a complex number.
-* Another class, ComplexCalculator, is created to calculate complex numbers arrays and matrices multiplication, and read user input.
+* Another class, ComplexCalculator, is created to calculate complex numbers arrays and matrices multiplication, and to read user input.
 
 ### Complex Number Class
 1. There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
