@@ -8,7 +8,9 @@
  * Description:    In this C# script, a class is created to defined complex numbers. The real part     *
  *                 and the imaginary part of a complex number must be given to create a instance of    *
  *                 Complex Number class. Once a complex number is created, its value cannot be change  *
- *                 to prevent changing its value accidentally.                                         *
+ *                 to prevent changing its value accidentally.                                         * 
+ *                 In Debug mode, When an instance of this class is destructed,                        *
+ *                 the notification will show on Console.                                              *
  *                 Users can get the real part and imaginary part through two getters.                 *
  *                 Users can get the magnitude and phase of a complex number by two getters.           *
  *                 Tostring method inherited from the Object class is overrided to print the           *
@@ -48,7 +50,6 @@ namespace ChenChienLin550CAssignment5
             {
                 Console.WriteLine(Environment.NewLine +
                     "The object is destructed at " + System.DateTime.Now);
-           
             }
         }
 
@@ -169,7 +170,6 @@ namespace ChenChienLin550CAssignment5
          * Arguments:  None
          * Returns:    One string
          */
-
         public override string ToString()
         {
             double roundRealPart = Math.Round(realPart,4);

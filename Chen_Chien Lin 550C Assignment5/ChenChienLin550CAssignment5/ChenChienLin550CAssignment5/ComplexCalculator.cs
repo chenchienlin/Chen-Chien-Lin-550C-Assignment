@@ -502,6 +502,7 @@ namespace ChenChienLin550CAssignment5
                 //Assign two integers
                 rownumber = Convert.ToInt32(position[0]);
                 colnumber = Convert.ToInt32(position[1]);
+
                 if (rownumber <= 0 || colnumber <= 0)
                 {
                     Console.WriteLine("The row number and column number of a matrix" +
@@ -631,10 +632,10 @@ namespace ChenChienLin550CAssignment5
 
         public int GetTaskType()
         {
-            Console.WriteLine("Which do you want to calculate?" +
-                              Environment.NewLine +
-                              "A. Two Arrays" + Environment.NewLine +
-                              "B. Two Matrices");
+            Console.WriteLine("Welcome to complex number calculator" +
+                Environment.NewLine + "Which one do you want to calculate?" +
+                Environment.NewLine + "A. Two Arrays" + Environment.NewLine + 
+                "B. Two Matrices");
             while (true)
             {
                 //Read user input
