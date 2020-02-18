@@ -612,7 +612,7 @@ namespace ChenChienLin550CAssignment5
          * Returns:    One boolean
          */
 
-        public bool CanConvertToDouble(string userInput)
+        private bool CanConvertToDouble(string userInput)
         {
             //Define a local variable
             double n;
