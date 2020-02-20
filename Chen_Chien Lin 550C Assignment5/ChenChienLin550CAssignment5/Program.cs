@@ -49,19 +49,19 @@ namespace ChenChienLin550CAssignment5
                     Console.WriteLine(Environment.NewLine + "Set the first array!");
 
                     //Set the first array based on user input
-                    ComplexNumber[] complexArray1 = calculator.SetComplexVector(vectorSize);
-                    calculator.ConfirmVector(complexArray1);
+                    ComplexNumber[] complexArray1 = calculator.SetComplexArray(vectorSize);
+                    calculator.ConfirmArray(complexArray1);
 
                     Console.WriteLine(Environment.NewLine + "Set the second Array!");
 
                     //Set the second array based on user input
-                    ComplexNumber[] complexArray2 = calculator.SetComplexVector(vectorSize);
-                    calculator.ConfirmVector(complexArray2);
+                    ComplexNumber[] complexArray2 = calculator.SetComplexArray(vectorSize);
+                    calculator.ConfirmArray(complexArray2);
 
                     //Print calculation result
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine(Environment.NewLine + "Result: ");
-                    Console.Write(calculator.MultiplyComplexVector(complexArray1, complexArray2).ToString());
+                    Console.Write(calculator.MultiplyComplexArray(complexArray1, complexArray2).ToString());
                     Console.WriteLine();
                     Console.ResetColor();
                     break;

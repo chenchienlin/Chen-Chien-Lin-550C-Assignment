@@ -7,7 +7,7 @@
  *                                                                                                               *
  * Description:    In this C# script, a helper class is created,                                                 *
  *                 no fields are declared in this class.                                                         *
- *                 This class is to calculate vectors and matrices made of complex numbers.                       *
+ *                 This class is to calculate arrays and matrices made of complex numbers.                       *
  *                 This class is reponsable for reading user input.                                              *
  *****************************************************************************************************************/
 
@@ -22,35 +22,35 @@ namespace ChenChienLin550CAssignment5
     {
 
         /*======================================================================================================
-         * Function:   MultiplyComplexVector
-         * Arguments:  Two vectors contain complex numbers
-         * Returns:    One vector made of complex numbers
+         * Function:   MultiplyComplexArray
+         * Arguments:  Two arrays contain complex numbers
+         * Returns:    One array made of complex numbers
          */
 
-        public ComplexNumber MultiplyComplexVector(ComplexNumber[] vector1, ComplexNumber[] vector2)
+        public ComplexNumber MultiplyComplexArray(ComplexNumber[] array1, ComplexNumber[] array2)
         {
             // The dimension of the row vector and the column vector must be match 
-            if (vector1.Length != vector2.Length)
+            if (array1.Length != array2.Length)
             {
-                throw new IndexOutOfRangeException("Column number in the first vector(matrix) and " +
-                    "row number in the second vector(matrix) should be the same");
+                throw new IndexOutOfRangeException("Column number in the first array(matrix) and " +
+                    "row number in the second array(matrix) should be the same");
             }
 
             // Initialize a new complex number
             ComplexNumber newComplex = new ComplexNumber(0, 0);
 
             // Compute new complex number using opertors overloaded in ComplexNumber class
-            for (int i = 0; i < vector1.Length; i++)
+            for (int i = 0; i < array1.Length; i++)
             {
 
                 // The elements in the vector cannot be null
                 try
                 {
-                    newComplex = newComplex + (vector1[i] * vector2[i]);
+                    newComplex = newComplex + (array1[i] * array2[i]);
                 }
                 catch (NullReferenceException)
                 {
-                    throw new NullReferenceException("Elements in the vector(matrix) cannot be null");
+                    throw new NullReferenceException("Elements in the array(matrix) cannot be null");
                 }
             }
 
@@ -74,7 +74,7 @@ namespace ChenChienLin550CAssignment5
             {
                 for (int j = 0; j < matrix2.GetLength(1); j++)
                 {
-                    newMatrix[i, j] = MultiplyComplexVector(GetRow(matrix1, i), GetColumn(matrix2, j));
+                    newMatrix[i, j] = MultiplyComplexArray(GetRow(matrix1, i), GetColumn(matrix2, j));
                 }
             }
 
@@ -85,59 +85,59 @@ namespace ChenChienLin550CAssignment5
         /*======================================================================================================
          * Function:   GetRow
          * Arguments:  One matrix made of complex numbers and one row number
-         * Returns:    One vector made of complex numbers
+         * Returns:    One array made of complex numbers
          */
 
         private ComplexNumber[] GetRow(ComplexNumber[,] complexMatrix, int rowNumber)
         {
 
-            // Initialize a new vector
-            ComplexNumber[] newVector = new ComplexNumber[complexMatrix.GetLength(1)];
+            // Initialize a new array
+            ComplexNumber[] newArray = new ComplexNumber[complexMatrix.GetLength(1)];
 
-            // Select each element in a specific row of the matrix and store into the new vector
+            // Select each element in a specific row of the matrix and store into the new array
             for (int i = 0; i < complexMatrix.GetLength(1); i++)
             {
-                newVector[i] = complexMatrix[rowNumber, i];
+                newArray[i] = complexMatrix[rowNumber, i];
             }
 
-            // Return the new vector 
-            return newVector;
+            // Return the new array 
+            return newArray;
         }
 
         /*======================================================================================================
          * Function:   GetColumn
          * Arguments:  One matrix made of complex numbers and one column number
-         * Returns:    One vector made of complex numbers
+         * Returns:    One array made of complex numbers
          */
 
-        private ComplexNumber[] GetColumn(ComplexNumber[,] complexVector, int colNumber)
+        private ComplexNumber[] GetColumn(ComplexNumber[,] complexArray, int colNumber)
         {
-            // Initialize a new vector
-            ComplexNumber[] newVector = new ComplexNumber[complexVector.GetLength(0)];
+            // Initialize a new array
+            ComplexNumber[] newArray = new ComplexNumber[complexArray.GetLength(0)];
 
-            // Select each element in a specific column of the matrix and store into the new vector
-            for (int i = 0; i < complexVector.GetLength(0); i++)
+            // Select each element in a specific column of the matrix and store into the new array
+            for (int i = 0; i < complexArray.GetLength(0); i++)
             {
-                newVector[i] = complexVector[i, colNumber];
+                newArray[i] = complexArray[i, colNumber];
             }
 
-            // Return the new vector
-            return newVector;
+            // Return the new array
+            return newArray;
         }
 
         /*======================================================================================================
-         * Function:   PrintVector
-         * Arguments:  One vector made of complex numbers
+         * Function:   PrintArray
+         * Arguments:  One array made of complex numbers
          * Returns:    None
          */
 
-        public void PrintVector(ComplexNumber[] complexVector)
+        public void PrintArray(ComplexNumber[] complexArray)
         {
             try
             {
-                //Print an vector in a specific format
-                Console.Write("Your vector : [ ");
-                foreach (var element in complexVector)
+                //Print an array in a specific format
+                Console.Write("Your array : [ ");
+                foreach (var element in complexArray)
                 {
                     Console.Write(element.ToString() + "  ");
                 }
@@ -146,7 +146,7 @@ namespace ChenChienLin550CAssignment5
             }
             catch (NullReferenceException)
             {
-                throw new NullReferenceException("Elements in the vector cannot be null");
+                throw new NullReferenceException("Elements in the array cannot be null");
             }
 
         }
@@ -182,34 +182,34 @@ namespace ChenChienLin550CAssignment5
         }
 
         /*======================================================================================================
-         * Function:   SetComplexVector
+         * Function:   SetComplexArray
          * Arguments:  One integer
-         * Returns:    One vector made of  complex numbers
+         * Returns:    One array made of  complex numbers
          */
 
-        public ComplexNumber[] SetComplexVector(int vectorSize)
+        public ComplexNumber[] SetComplexArray(int vectorSize)
         {
             //Define a boolean variable
             bool needHint = true;
 
-            //Create a new complex vector contains certain element
-            ComplexNumber[] complexVector = new ComplexNumber[vectorSize];
+            //Create a new complex array contains certain element
+            ComplexNumber[] complexArray = new ComplexNumber[vectorSize];
 
-            //Assignment each element in the vector
+            //Assignment each element in the array
             for (int i = 0; i < vectorSize; i++)
             {
-                Console.WriteLine(String.Format("Set the {0} element in the vector!", i + 1));
-                complexVector[i] = SetComplexNumber(needHint);
+                Console.WriteLine(String.Format("Set the {0} element in the array!", i + 1));
+                complexArray[i] = SetComplexNumber(needHint);
                 needHint = false;
             }
 
-            //Return new vector
-            return complexVector;
+            //Return new array
+            return complexArray;
         }
 
         /*======================================================================================================
          * Function:   SetComplexMatrix
-         * Arguments:  One vector contains integer
+         * Arguments:  One array contains integer
          * Returns:    One matrix made of complex numbers
          */
 
@@ -277,7 +277,7 @@ namespace ChenChienLin550CAssignment5
                 {
                     // Set the Foreground color
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("Warning: Your vectors only contain 1 element!");
+                    Console.WriteLine("Warning: Your arrays only contain 1 element!");
                     Console.ResetColor();
                 }
 
@@ -290,7 +290,7 @@ namespace ChenChienLin550CAssignment5
         /*======================================================================================================
         * Function:   SetMatrixSize
         * Arguments:  None
-        * Returns:    One integer vector
+        * Returns:    One integer array
         */
 
         public int[] SetMatrixSize()
@@ -336,7 +336,7 @@ namespace ChenChienLin550CAssignment5
                     Console.ResetColor();
                 }
 
-                    //Return one integer vector
+                    //Return one integer array
                     return new int[] { rownumber, colnumber };
 
             } while (true);
@@ -344,7 +344,7 @@ namespace ChenChienLin550CAssignment5
 
         /*======================================================================================================
          * Function:   CanMatch
-         * Arguments:  Two integer vectors
+         * Arguments:  Two integer arrays
          * Returns:    One boolean
          */
 
@@ -365,22 +365,22 @@ namespace ChenChienLin550CAssignment5
         }
 
         /*======================================================================================================
-         * Function:   ConfirmVector
-         * Arguments:  One vector made of complex number
+         * Function:   ConfirmArray
+         * Arguments:  One array made of complex number
          * Returns:    void
          */
 
-        public void ConfirmVector(ComplexNumber[] complexVector)
+        public void ConfirmArray(ComplexNumber[] complexArray)
         {
             while (true)
             {
-                //Print vector
-                PrintVector(complexVector);
+                //Print array
+                PrintArray(complexArray);
 
                 if (!IsCorrect())
                 {
-                    //Change the specific element in the vector
-                    ChangeVectorElement(complexVector);
+                    //Change the specific element in the array
+                    ChangeArrayElement(complexArray);
                 }
                 else break;
             }
@@ -427,12 +427,12 @@ namespace ChenChienLin550CAssignment5
         }
 
         /*======================================================================================================
-         * Function:   ChangeVectorElement
-         * Arguments:  One vector made of complex numbers
+         * Function:   ChangeArrayElement
+         * Arguments:  One array made of complex numbers
          * Returns:    Void
          */
 
-        private void ChangeVectorElement(ComplexNumber[] vector)
+        private void ChangeArrayElement(ComplexNumber[] array)
         {
             //Define local variables
             int index;
@@ -466,11 +466,11 @@ namespace ChenChienLin550CAssignment5
                     continue;
                 }
 
-                if (index > vector.Length)
+                if (index > array.Length)
                 {
-                    Console.WriteLine(String.Format("Your vector only have {0} elemnts, " +
-                                                    "you cannot change the {1} element in the vector",
-                                                    vector.Length, index));
+                    Console.WriteLine(String.Format("Your array only have {0} elemnts, " +
+                                                    "you cannot change the {1} element in the array",
+                                                    array.Length, index));
                     continue;
                 }
                 else
@@ -480,8 +480,8 @@ namespace ChenChienLin550CAssignment5
                 }
             } while (true);
 
-            //Reset the specific element in the vector
-            vector[index] = SetComplexNumber(needHint);
+            //Reset the specific element in the array
+            array[index] = SetComplexNumber(needHint);
         }
 
         /*======================================================================================================
@@ -652,7 +652,7 @@ namespace ChenChienLin550CAssignment5
         {
             Console.WriteLine("Welcome to complex number calculator" +
                 Environment.NewLine + "Which one do you want to multiply?" +
-                Environment.NewLine + "A. Two Vectors" + Environment.NewLine + 
+                Environment.NewLine + "A. Two Arrays" + Environment.NewLine + 
                 "B. Two Matrices");
             while (true)
             {

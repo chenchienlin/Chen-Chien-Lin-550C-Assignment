@@ -49,7 +49,7 @@ namespace ChenChienLin550CAssignment5
             if(isDebug)
             {
                 Console.WriteLine(Environment.NewLine +
-                    "The 1 object is destructed at " + System.DateTime.Now);
+                    "The object is destructed at " + System.DateTime.Now);
             }
         }
 
@@ -86,7 +86,7 @@ namespace ChenChienLin550CAssignment5
         public double AbsoluteValue
         {
             // Getter for the absolute value of a complex number
-            get { return Math.Round(Math.Sqrt(realPart * realPart + imaginaryPart * imaginaryPart), 3);}
+            get { return System.Math.Round(System.Math.Sqrt(realPart * realPart + imaginaryPart * imaginaryPart), 3);}
         }
 
         /*==========================================================================
@@ -98,7 +98,7 @@ namespace ChenChienLin550CAssignment5
         public double Phase
         {
             // Getter for the phase of a complex number
-            get { return Math.Round(Math.Atan2(imaginaryPart, realPart), 3); }
+            get { return System.Math.Round(System.Math.Atan2(imaginaryPart, realPart), 3); }
         }
 
         /*==========================================================================
@@ -112,8 +112,8 @@ namespace ChenChienLin550CAssignment5
             // Getter for the polar form of a complex number
             get { 
                     return String.Format("{0}( cos({1} + isin({1}) )",
-                    Math.Round(Math.Sqrt(realPart*realPart + imaginaryPart * imaginaryPart),3),
-                    Math.Round(Math.Atan2(imaginaryPart,realPart),3)); 
+                    System.Math.Round(System.Math.Sqrt(realPart*realPart + imaginaryPart * imaginaryPart),3),
+                    System.Math.Round(System.Math.Atan2(imaginaryPart,realPart),3)); 
                 }
         }
 
