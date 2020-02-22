@@ -43,16 +43,16 @@ namespace ChenChienLin550CAssignment5
                 //Define the process to calculate two arrays
                 case 1:
 
+                    Console.WriteLine("\nSet the first vector!");
+
                     //Define a integer represent vector size
                     int vectorSize = calculator.SetVectorSize();
-
-                    Console.WriteLine(Environment.NewLine + "Set the first array!");
 
                     //Set the first array based on user input
                     ComplexNumber[] complexArray1 = calculator.SetComplexVector(vectorSize);
                     calculator.ConfirmVector(complexArray1);
 
-                    Console.WriteLine(Environment.NewLine + "Set the second Array!");
+                    Console.WriteLine("\nSet the second vector!");
 
                     //Set the second array based on user input
                     ComplexNumber[] complexArray2 = calculator.SetComplexVector(vectorSize);
@@ -60,7 +60,7 @@ namespace ChenChienLin550CAssignment5
 
                     //Print calculation result
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine(Environment.NewLine + "Result: ");
+                    Console.WriteLine("\nResult: ");
                     Console.Write(calculator.MultiplyComplexVector(complexArray1, complexArray2).ToString());
                     Console.WriteLine();
                     Console.ResetColor();
@@ -76,12 +76,12 @@ namespace ChenChienLin550CAssignment5
                     //Check the sizes of two matrices
                     while (true)
                     {
-                        Console.WriteLine(Environment.NewLine + "Set the first matrix!");
+                        Console.WriteLine("\nSet the first matrix or vector!");
 
                         //Set the first matrix size based on user input
                         matrixSize1 = calculator.SetMatrixSize();
 
-                        Console.WriteLine(Environment.NewLine + "Set the second matrix!");
+                        Console.WriteLine(Environment.NewLine + "Set the second matrix or vector!");
 
                         //Set the first matrix size based on user input
                         matrixSize2 = calculator.SetMatrixSize();

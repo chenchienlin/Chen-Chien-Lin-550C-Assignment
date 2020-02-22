@@ -161,6 +161,7 @@ namespace ChenChienLin550CAssignment5
         {
             try
             {
+
                 //Print a matrix in a specific format
                 for (int i = 0; i < complexMatrix.GetLength(0); i++)
                 {
@@ -198,7 +199,11 @@ namespace ChenChienLin550CAssignment5
             //Assignment each element in the vector
             for (int i = 0; i < vectorSize; i++)
             {
-                Console.WriteLine(String.Format("Set the {0} element in the vector!", i + 1));
+                // Define a local variable
+                int index = i + 1;
+
+                Console.WriteLine(String.Format("Set No.{0} element in the vector!", index));
+
                 complexVector[i] = SetComplexNumber(needHint);
                 needHint = false;
             }
@@ -247,7 +252,7 @@ namespace ChenChienLin550CAssignment5
 
         public int SetVectorSize()
         {
-            Console.WriteLine("Enter the size of two complex number vectors");
+            Console.WriteLine("Enter the size of two complex number vectors. Ex: 5");
 
             do
             {
@@ -295,7 +300,8 @@ namespace ChenChienLin550CAssignment5
 
         public int[] SetMatrixSize()
         {
-            Console.WriteLine("Enter the size of a matrix");
+            Console.WriteLine("Enter the size of a matrix or a vector. " +
+                "Ex: 1,2 2,4");
 
             do
             {
@@ -321,20 +327,29 @@ namespace ChenChienLin550CAssignment5
                     Console.WriteLine("The row number and column number of a matrix" +
                                       "cannot be or less than zero!");
                 }
-                if (rownumber == 1)
+                if (rownumber == 1 && colnumber ==1)
                 {
                     // Set the Foreground color
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("Warning: Your matrix only contains 1 row!");
+                    Console.WriteLine("Warning: Your matrix or vector" +
+                        "contains one element!");
                     Console.ResetColor();
                 }
-                if (colnumber == 1)
+                else if (rownumber == 1)
                 {
                     // Set the Foreground color
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("Warning: Your matrix only contains 1 column!");
+                    Console.WriteLine("Notice: It's a row vector!");
                     Console.ResetColor();
                 }
+                else if (colnumber == 1)
+                {
+                    // Set the Foreground color
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Notice: It's a column vector!");
+                    Console.ResetColor();
+                }
+                
 
                     //Return one integer vector
                     return new int[] { rownumber, colnumber };
@@ -566,8 +581,10 @@ namespace ChenChienLin550CAssignment5
                 //Print hint 
                 if (needHint)
                 {
-                    Console.WriteLine("Enter two numeric numbers and seperate them with a comma." +
-                        Environment.NewLine + "Ex:  2,2  or  -2,-2  or  0,2  or  2,0 ");
+                    Console.WriteLine("Enter two numeric numbers to " +
+                        "represent the real part and imaginary part. " +
+                        "Seperate them with a comma.\n" +
+                        "Ex: If your complex number is 2 + -0.2i, Enter: 2,-0.2 ");
                 }
 
                 //Read user input
@@ -650,10 +667,14 @@ namespace ChenChienLin550CAssignment5
 
         public int GetTaskType()
         {
-            Console.WriteLine("Welcome to complex number calculator" +
-                Environment.NewLine + "Which one do you want to multiply?" +
-                Environment.NewLine + "A. Two Vectors" + Environment.NewLine + 
+            Console.WriteLine("Welcome to complex number calculator\n" +
+                "Which one do you want to multiply?\n\n" +
+                "A. Two Vectors\n" + 
                 "B. Two Matrices");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("Notice: If you want to multiply a vector by a matrix, and " +
+                "vice versa. Please select B");
+            Console.ResetColor();
             while (true)
             {
                 //Read user input

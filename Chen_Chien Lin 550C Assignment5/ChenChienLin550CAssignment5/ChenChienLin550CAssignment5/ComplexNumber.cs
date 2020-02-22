@@ -49,7 +49,7 @@ namespace ChenChienLin550CAssignment5
             if(isDebug)
             {
                 Console.WriteLine(Environment.NewLine +
-                    "The 1 object is destructed at " + System.DateTime.Now);
+                    "The object is destructed at " + System.DateTime.Now);
             }
         }
 
