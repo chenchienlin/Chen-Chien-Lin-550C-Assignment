@@ -10,7 +10,7 @@ This project is for MECH 550C Assignment 7
 
 ## Usage 
 1. Double click ChenChienLin550CAssignment7.exe.
-2. Choose your task. A. two arrays multiplication / B. two matrices multiplication / C. two matrices division 
+2. Choose your task. A. two arrays multiplication / B. two matrices multiplication / C. two matrices division. 
 3. Enter the size of arrays / matrices. These numbers should be positive integers.
 4. Set each element in the arrays / matrices. Enter two numbers represent the real part and imaginary part and seperate them with a comma.
 
