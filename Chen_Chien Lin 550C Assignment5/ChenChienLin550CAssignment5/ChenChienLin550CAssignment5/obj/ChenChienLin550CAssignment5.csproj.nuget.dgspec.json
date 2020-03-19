@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\Jack\\Documents\\GitHub\\Chen-Chien-Lin-550C-Assignment\\Chen_Chien Lin 550C Assignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5.csproj": {}
+    "/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/Chen_Chien Lin 550C Assignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5.csproj": {}
   },
   "projects": {
-    "D:\\Users\\Jack\\Documents\\GitHub\\Chen-Chien-Lin-550C-Assignment\\Chen_Chien Lin 550C Assignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5.csproj": {
+    "/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/Chen_Chien Lin 550C Assignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Jack\\Documents\\GitHub\\Chen-Chien-Lin-550C-Assignment\\Chen_Chien Lin 550C Assignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5.csproj",
+        "projectUniqueName": "/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/Chen_Chien Lin 550C Assignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5.csproj",
         "projectName": "ChenChienLin550CAssignment5",
-        "projectPath": "D:\\Users\\Jack\\Documents\\GitHub\\Chen-Chien-Lin-550C-Assignment\\Chen_Chien Lin 550C Assignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5.csproj",
-        "packagesPath": "C:\\Users\\Jack\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Jack\\Documents\\GitHub\\Chen-Chien-Lin-550C-Assignment\\Chen_Chien Lin 550C Assignment5\\ChenChienLin550CAssignment5\\ChenChienLin550CAssignment5\\obj\\",
+        "projectPath": "/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/Chen_Chien Lin 550C Assignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5.csproj",
+        "packagesPath": "/Users/jack/.nuget/packages/",
+        "outputPath": "/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/Chen_Chien Lin 550C Assignment5/ChenChienLin550CAssignment5/ChenChienLin550CAssignment5/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jack\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/jack/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

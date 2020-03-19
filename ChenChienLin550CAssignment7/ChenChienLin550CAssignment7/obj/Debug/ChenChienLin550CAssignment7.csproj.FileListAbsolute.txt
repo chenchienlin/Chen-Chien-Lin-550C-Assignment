@@ -1,0 +1,5 @@
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment7/ChenChienLin550CAssignment7/obj/Debug/ChenChienLin550CAssignment7.csprojAssemblyReference.cache
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment7/ChenChienLin550CAssignment7/bin/Debug/ChenChienLinAssignment7.exe
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment7/ChenChienLin550CAssignment7/bin/Debug/ChenChienLinAssignment7.pdb
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment7/ChenChienLin550CAssignment7/obj/Debug/ChenChienLinAssignment7.exe
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment7/ChenChienLin550CAssignment7/obj/Debug/ChenChienLinAssignment7.pdb

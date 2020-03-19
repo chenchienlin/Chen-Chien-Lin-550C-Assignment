@@ -1,0 +1,27 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment6", "ChenChienLin550CAssignment6\ChenChienLin550CAssignment6.csproj", "{C3A5AE8B-9642-4ED2-AE9B-50E4B9E6EDFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3A5AE8B-9642-4ED2-AE9B-50E4B9E6EDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3A5AE8B-9642-4ED2-AE9B-50E4B9E6EDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3A5AE8B-9642-4ED2-AE9B-50E4B9E6EDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3A5AE8B-9642-4ED2-AE9B-50E4B9E6EDFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal

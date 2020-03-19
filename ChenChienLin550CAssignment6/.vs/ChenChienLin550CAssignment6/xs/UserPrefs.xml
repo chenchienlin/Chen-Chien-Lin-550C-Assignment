@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{C3A5AE8B-9642-4ED2-AE9B-50E4B9E6EDFC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChenChienLin550CAssignment6/Program.cs">
+    <Files>
+      <File FileName="ChenChienLin550CAssignment6/Program.cs" Line="113" Column="34" />
+      <File FileName="ChenChienLin550CAssignment6/Book.cs" />
+      <File FileName="ChenChienLin550CAssignment6/Student.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ChenChienLin550CAssignment6" expanded="True" selected="True">
+            <Node name="ChenChienLin550CAssignment6" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment6 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

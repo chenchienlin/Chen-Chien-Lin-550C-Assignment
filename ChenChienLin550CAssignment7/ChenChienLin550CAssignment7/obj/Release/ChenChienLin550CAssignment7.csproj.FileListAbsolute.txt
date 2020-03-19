@@ -1,0 +1,2 @@
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment7/ChenChienLin550CAssignment7/bin/Release/ChenChienLinAssignment7.exe
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment7/ChenChienLin550CAssignment7/obj/Release/ChenChienLinAssignment7.exe

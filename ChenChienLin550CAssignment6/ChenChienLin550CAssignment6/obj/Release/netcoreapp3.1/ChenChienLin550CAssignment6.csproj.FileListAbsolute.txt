@@ -1,0 +1,9 @@
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/bin/Release/netcoreapp3.1/ChenChienLin550CAssignment6.deps.json
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/bin/Release/netcoreapp3.1/ChenChienLin550CAssignment6.runtimeconfig.json
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/bin/Release/netcoreapp3.1/ChenChienLin550CAssignment6.runtimeconfig.dev.json
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/bin/Release/netcoreapp3.1/ChenChienLin550CAssignment6.dll
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/bin/Release/netcoreapp3.1/ChenChienLin550CAssignment6.pdb
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/obj/Release/netcoreapp3.1/ChenChienLin550CAssignment6.AssemblyInfoInputs.cache
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/obj/Release/netcoreapp3.1/ChenChienLin550CAssignment6.AssemblyInfo.cs
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/obj/Release/netcoreapp3.1/ChenChienLin550CAssignment6.dll
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment6/ChenChienLin550CAssignment6/obj/Release/netcoreapp3.1/ChenChienLin550CAssignment6.pdb

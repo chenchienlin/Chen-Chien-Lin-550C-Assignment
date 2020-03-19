@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{17395F03-6A71-43A7-80D2-42EC645462D0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ComplexCalculator.cs">
+    <Files>
+      <File FileName="Program.cs" Line="2" Column="17" />
+      <File FileName="ComplexCalculator.cs" Line="813" Column="16" />
+      <File FileName="ComplexNumber.cs" Line="27" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ChenChienLin550CAssignment7" expanded="True">
+            <Node name="ChenChienLin550CAssignment7" expanded="True">
+              <Node name="ComplexCalculator.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment7 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
