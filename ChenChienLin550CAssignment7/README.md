@@ -34,8 +34,8 @@ This project is for MECH 550C Assignment 7
 2. Methods which can perform two arrays and two matrices multiplication by using operators overloaded in Complex Number class
    are created in this class. Also, this class privides method for matrices division. Ex: inverse(A) * B <br/>
 &ensp;Two input arrays must be made of complex numbers and cannot be null.<br/>
-&ensp;Two input matrices must be matrices made of complex numbers and cannot be null.
-&ensp;For matrices division, two input matrices must be square matrices with same dimensions. Ex: A[3x3] B[3x3]
+&ensp;Two input matrices must be matrices made of complex numbers and cannot be null.<br/>
+&ensp;For matrices division, two input matrices must be square matrices with same dimensions. Ex: A[3x3] B[3x3].
 4. A method to display a matrix in a specific pattern is created.
 5. Two methods are created to help users set the size of an array and a matrix, respectively.
 6. Two methods are created to help users set the elements in an array and in a matrix, respectively.
