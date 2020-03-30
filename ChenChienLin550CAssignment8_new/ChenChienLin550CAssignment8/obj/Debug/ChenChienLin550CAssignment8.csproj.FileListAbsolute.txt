@@ -1,0 +1,5 @@
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.exe
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.pdb
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/Debug/ChenChienLin550CAssignment8.csprojAssemblyReference.cache
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/Debug/ChenChienLin550CAssignment8.exe
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/Debug/ChenChienLin550CAssignment8.pdb
