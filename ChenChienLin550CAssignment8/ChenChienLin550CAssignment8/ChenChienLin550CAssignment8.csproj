@@ -40,18 +40,6 @@
       <Project>{784CDB47-E5A4-463C-90D5-551B0FD5D62D}</Project>
       <Name>ChenChienLin550CAssignment8ComplexNumber</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ChenChienLin550CAssignment8Controller\ChenChienLin550CAssignment8Controller.csproj">
-      <Project>{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}</Project>
-      <Name>ChenChienLin550CAssignment8Controller</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChenChienLin550CAssignment8Model\ChenChienLin550CAssignment8Model.csproj">
-      <Project>{36AF1998-D6EF-409D-820A-BA95BE8244AE}</Project>
-      <Name>ChenChienLin550CAssignment8Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChenChienLin550CAssignment8Simulator\ChenChienLin550CAssignment8Simulator.csproj">
-      <Project>{70548479-DFD0-488D-8651-1695C8270880}</Project>
-      <Name>ChenChienLin550CAssignment8Simulator</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

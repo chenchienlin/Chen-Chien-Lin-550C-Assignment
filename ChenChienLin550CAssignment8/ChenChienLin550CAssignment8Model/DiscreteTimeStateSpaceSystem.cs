@@ -11,65 +11,67 @@
  *******************************************************************************************************/
 
 /***************************************** USING NAMESPACES ********************************************/
-using ChenChienLin550CAssignment8ComplexNumber;
-
-namespace ChenChienLin550CAssignment8Model
+namespace ChenChienLin550CAssignment8
 {
-    public class DiscreteTimeStateSpaceSystem : StateSpaceSystem
+    namespace ChenChienLin550CAssignment8Model
     {
-        private double ts;
-
-        public DiscreteTimeStateSpaceSystem(double[,] matrixA, double[,] matrixB,
-            double[,] matrixC, double[,] matrixD, double ts) : base(matrixA, matrixB, matrixC, matrixD)
+        using ChenChienLin550CAssignment8ComplexNumber;
+        internal class DiscreteTimeStateSpaceSystem : StateSpaceSystem
         {
-            this.ts = ts;
-        }
+            private double ts;
 
-        public void SetSamplingTime(double ts)
-        {
-            this.ts = ts;
-            // Compute new A, B, C, D matrices based on given sampling time
-            double[,] newMatrixA = new double[matrixA.GetLength(1), matrixA.GetLength(0)];
-            double[,] newMatrixB = new double[matrixB.GetLength(1), matrixB.GetLength(0)];
-            double[,] newMatrixC = new double[matrixC.GetLength(1), matrixC.GetLength(0)];
-            double[,] newMatrixD = new double[matrixD.GetLength(1), matrixD.GetLength(0)];
+            public DiscreteTimeStateSpaceSystem(double[,] matrixA, double[,] matrixB,
+                double[,] matrixC, double[,] matrixD, double ts) : base(matrixA, matrixB, matrixC, matrixD)
+            {
+                this.ts = ts;
+            }
 
-            //Assign new A, B, C, D matrices
-            this.matrixA = newMatrixA;
-            this.matrixB = newMatrixB;
-            this.matrixC = newMatrixC;
-            this.matrixD = newMatrixD;
-        }
+            public void SetSamplingTime(double ts)
+            {
+                this.ts = ts;
+                // Compute new A, B, C, D matrices based on given sampling time
+                double[,] newMatrixA = new double[matrixA.GetLength(1), matrixA.GetLength(0)];
+                double[,] newMatrixB = new double[matrixB.GetLength(1), matrixB.GetLength(0)];
+                double[,] newMatrixC = new double[matrixC.GetLength(1), matrixC.GetLength(0)];
+                double[,] newMatrixD = new double[matrixD.GetLength(1), matrixD.GetLength(0)];
 
-        public override void ToTransferFunction()
-        {
-            // Transfer a state space model to transfer functions.
-        }
-        public override bool BIBOStability()
-        {
-            // Check whether all poles are in unit disc
-            return true;
-        }
+                //Assign new A, B, C, D matrices
+                this.matrixA = newMatrixA;
+                this.matrixB = newMatrixB;
+                this.matrixC = newMatrixC;
+                this.matrixD = newMatrixD;
+            }
 
-        public override bool EigenValueStability()
-        {
-            // Check internal stability
-            return true;
-        }
+            public override void ToTransferFunction()
+            {
+                // Transfer a state space model to transfer functions.
+            }
+            public override bool BIBOStability()
+            {
+                // Check whether all poles are in unit disc
+                return true;
+            }
 
-        public override bool LyapunovStability()
-        {
-            // Check discrete time lyapunov equation
-            return true;
-        }
+            public override bool EigenValueStability()
+            {
+                // Check internal stability
+                return true;
+            }
 
-        public override ComplexNumber[] PoleLocation(double[,] matirxA)
-        {
-            int poleNumber = matirxA.GetLength(1);
-            //Compute pole location
-            ComplexNumber[] poleLocation = new ComplexNumber[poleNumber];
+            public override bool LyapunovStability()
+            {
+                // Check discrete time lyapunov equation
+                return true;
+            }
 
-            return poleLocation;
+            public override ComplexNumber[] PoleLocation(double[,] matirxA)
+            {
+                int poleNumber = matirxA.GetLength(1);
+                //Compute pole location
+                ComplexNumber[] poleLocation = new ComplexNumber[poleNumber];
+
+                return poleLocation;
+            }
         }
     }
 }

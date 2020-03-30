@@ -14,34 +14,36 @@
 
 /***************************************** USING NAMESPACES ********************************************/
 using ChenChienLin550CAssignment8ComplexNumber;
-
-namespace ChenChienLin550CAssignment8Controller
+namespace ChenChienLin550CAssignment8
 {
-    public class StateFeedBack
+    namespace ChenChienLin550CAssignment8Controller
     {
-        public double[,] PolePlacement(double[,] matrixA, double[,] matrixB,
-            ComplexNumber[] newPoleLocation)
+        public class StateFeedBack
         {
-            int rowNumber = matrixA.GetLength(1);
-            int colNumber = matrixB.GetLength(0);
+            public double[,] PolePlacement(double[,] matrixA, double[,] matrixB,
+                ComplexNumber[] newPoleLocation)
+            {
+                int rowNumber = matrixA.GetLength(1);
+                int colNumber = matrixB.GetLength(0);
 
-            if (!Controllable(matrixA, matrixB))
-                throw new System.ArgumentException("Input system is not controllable");
+                if (!Controllable(matrixA, matrixB))
+                    throw new System.ArgumentException("Input system is not controllable");
 
 
 
-            //Use new pole location to compute State feedback gain matrix K
+                //Use new pole location to compute State feedback gain matrix K
                 double[,] K = new double[rowNumber, colNumber];
                 return K;
 
 
-        }
+            }
 
 
-        public bool Controllable(double[,] matrixA, double[,] matrixB)
-        {
-            // Compute Contrallablity 
-            return true;
+            public bool Controllable(double[,] matrixA, double[,] matrixB)
+            {
+                // Compute Contrallablity 
+                return true;
+            }
         }
     }
 }

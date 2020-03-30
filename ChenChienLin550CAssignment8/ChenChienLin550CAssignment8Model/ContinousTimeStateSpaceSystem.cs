@@ -13,69 +13,71 @@
  *******************************************************************************************************/
 
 /***************************************** USING NAMESPACES ********************************************/
-using ChenChienLin550CAssignment8ComplexNumber;
-
-namespace ChenChienLin550CAssignment8Model
+namespace ChenChienLin550CAssignment8
 {
-    public class ContinousTimeStateSpaceSystem : StateSpaceSystem
+    namespace ChenChienLin550CAssignment8Model
     {
-        public ContinousTimeStateSpaceSystem(double[,] matrixA, double[,] matrixB,
-            double[,] matrixC, double[,] matrixD) :base(matrixA, matrixB, matrixC, matrixD) { }
-            
-        public override void ToTransferFunction()
+        using ChenChienLin550CAssignment8ComplexNumber;
+        internal class ContinousTimeStateSpaceSystem : StateSpaceSystem
         {
-            // Transfer a state space model to transfer functions.
-        }
+            public ContinousTimeStateSpaceSystem(double[,] matrixA, double[,] matrixB,
+                double[,] matrixC, double[,] matrixD) : base(matrixA, matrixB, matrixC, matrixD) { }
 
-        public override bool BIBOStability()
-        {
-            //Check whether all poles are in open left hand plane
-            return true;
-        }
+            public override void ToTransferFunction()
+            {
+                // Transfer a state space model to transfer functions.
+            }
 
-        public override bool EigenValueStability()
-        {
-            //Check internal stability
-            return true;
-        }
+            public override bool BIBOStability()
+            {
+                //Check whether all poles are in open left hand plane
+                return true;
+            }
 
-        public override bool LyapunovStability()
-        {
-            //Check continous time lyapunov equation
-            return true;
-        }
+            public override bool EigenValueStability()
+            {
+                //Check internal stability
+                return true;
+            }
 
-        public override ComplexNumber[] PoleLocation(double[,] matirxA)
-        {
-            int poleNumber = matirxA.GetLength(1);
+            public override bool LyapunovStability()
+            {
+                //Check continous time lyapunov equation
+                return true;
+            }
 
-            //Compute pole location
-            ComplexNumber[] poleLocation = new ComplexNumber[poleNumber];
+            public override ComplexNumber[] PoleLocation(double[,] matirxA)
+            {
+                int poleNumber = matirxA.GetLength(1);
 
-            return poleLocation;
-        }
+                //Compute pole location
+                ComplexNumber[] poleLocation = new ComplexNumber[poleNumber];
 
-        public DiscreteTimeStateSpaceSystem ToDiscreteTimeSystem( double ts)
-        {
-            // Define local variable 
-            double[,] newMatrixA = new double[MatrixA.GetLength(1),
-                MatrixA.GetLength(0)];
-            double[,] newMatrixB = new double[MatrixB.GetLength(1),
-                MatrixB.GetLength(0)];
-            double[,] newMatrixC = new double[MatrixC.GetLength(1),
-                MatrixC.GetLength(0)];
-            double[,] newMatrixD = new double[MatrixD.GetLength(1),
-                MatrixD.GetLength(0)];
+                return poleLocation;
+            }
 
-            // Calculate matrix exponetial to obtain new matrix
-            // Update newMatrixA, newMatrixB, newMatrixC, newMatrixD
+            public DiscreteTimeStateSpaceSystem ToDiscreteTimeSystem(double ts)
+            {
+                // Define local variable 
+                double[,] newMatrixA = new double[MatrixA.GetLength(1),
+                    MatrixA.GetLength(0)];
+                double[,] newMatrixB = new double[MatrixB.GetLength(1),
+                    MatrixB.GetLength(0)];
+                double[,] newMatrixC = new double[MatrixC.GetLength(1),
+                    MatrixC.GetLength(0)];
+                double[,] newMatrixD = new double[MatrixD.GetLength(1),
+                    MatrixD.GetLength(0)];
 
-            // Create a discrete time system 
-            DiscreteTimeStateSpaceSystem dtSystem =
-                new DiscreteTimeStateSpaceSystem(newMatrixA, newMatrixB, newMatrixC, newMatrixD);
+                // Calculate matrix exponetial to obtain new matrix
+                // Update newMatrixA, newMatrixB, newMatrixC, newMatrixD
 
-            // Return discrete time system
-            return dtSystem;
+                // Create a discrete time system 
+                DiscreteTimeStateSpaceSystem dtSystem =
+                    new DiscreteTimeStateSpaceSystem(newMatrixA, newMatrixB, newMatrixC, newMatrixD, ts);
+
+                // Return discrete time system
+                return dtSystem;
+            }
         }
     }
 }

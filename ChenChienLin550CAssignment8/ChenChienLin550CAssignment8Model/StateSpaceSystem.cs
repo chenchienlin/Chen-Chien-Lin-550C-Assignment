@@ -21,46 +21,50 @@
 using System;
 using ChenChienLin550CAssignment8ComplexNumber;
 
-namespace ChenChienLin550CAssignment8Model
+namespace ChenChienLin550CAssignment8
 {
-    public abstract class StateSpaceSystem
+    namespace ChenChienLin550CAssignment8Model
     {
-        // Define fields of a state space system
-        protected double[,] matrixA;
-        protected double[,] matrixB;
-        protected double[,] matrixC;
-        protected double[,] matrixD;
-
-        public StateSpaceSystem(double[,] matrixA, double[,] matrixB,
-            double[,] matrixC, double[,] matrixD)
+        using ChenChienLin550CAssignment8ComplexNumber;
+        internal abstract class StateSpaceSystem
         {
-            this.matrixA = matrixA;
-            this.matrixB = matrixB;
-            this.matrixC = matrixC;
-            this.matrixD = matrixD;
+            // Define fields of a state space system
+            protected double[,] matrixA;
+            protected double[,] matrixB;
+            protected double[,] matrixC;
+            protected double[,] matrixD;
 
+            public StateSpaceSystem(double[,] matrixA, double[,] matrixB,
+                double[,] matrixC, double[,] matrixD)
+            {
+                this.matrixA = matrixA;
+                this.matrixB = matrixB;
+                this.matrixC = matrixC;
+                this.matrixD = matrixD;
+
+            }
+
+            public double[,] MatrixA { get => matrixA; }
+            public double[,] MatrixB { get => matrixB; }
+            public double[,] MatrixC { get => matrixC; }
+            public double[,] MatrixD { get => matrixD; }
+
+
+
+            // Transfer a state space model to transfer function;
+            public abstract void ToTransferFunction();
+
+            // Check BIBO stability
+            public abstract bool BIBOStability();
+
+            // Check internal stability
+            public abstract bool EigenValueStability();
+
+            // Check Lyapunov stability
+            public abstract bool LyapunovStability();
+
+            // Compute pole location
+            public abstract ComplexNumber[] PoleLocation(double[,] matrixA);
         }
-
-        public double[,] MatrixA { get => matrixA; }
-        public double[,] MatrixB { get => matrixB; }
-        public double[,] MatrixC { get => matrixC; }
-        public double[,] MatrixD { get => matrixD; }
-
-
-
-        // Transfer a state space model to transfer function;
-        public abstract void ToTransferFunction();
-
-        // Check BIBO stability
-        public abstract bool BIBOStability();
-
-        // Check internal stability
-        public abstract bool EigenValueStability();
-
-        // Check Lyapunov stability
-        public abstract bool LyapunovStability();
-
-        // Compute pole location
-        public abstract ComplexNumber[] PoleLocation(double[,] matrixA);
     }
 }

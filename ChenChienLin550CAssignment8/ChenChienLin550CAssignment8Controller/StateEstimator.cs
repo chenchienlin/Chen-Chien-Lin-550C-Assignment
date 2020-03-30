@@ -14,37 +14,39 @@
 
 /***************************************** USING NAMESPACES ********************************************/
 using ChenChienLin550CAssignment8ComplexNumber;
-
-namespace ChenChienLin550CAssignment8Controller
+namespace ChenChienLin550CAssignment8
 {
-    public class StateEstimator
+    namespace ChenChienLin550CAssignment8Controller
     {
-        public double[,] Observer(double[,] matrixA, double[,] matrixC,
-            ComplexNumber[] poleLocation)
+        public class StateEstimator
         {
-            int rowNumber = matrixA.GetLength(1);
-            int colNumber = matrixC.GetLength(1);
-
-            if (Observable(matrixA, matrixC) == true)
+            public double[,] Observer(double[,] matrixA, double[,] matrixC,
+                ComplexNumber[] poleLocation)
             {
+                int rowNumber = matrixA.GetLength(1);
+                int colNumber = matrixC.GetLength(1);
 
-                //Use specified pole location to compute state estimator gain matrix L
-                double[,] L = new double[rowNumber, colNumber];
-                return L;
+                if (Observable(matrixA, matrixC) == true)
+                {
+
+                    //Use specified pole location to compute state estimator gain matrix L
+                    double[,] L = new double[rowNumber, colNumber];
+                    return L;
+
+                }
+                else
+                {
+                    throw new System.ArgumentException("Input system is not observable");
+                }
 
             }
-            else
+
+            public bool Observable(double[,] matrixA, double[,] matrixC)
             {
-                throw new System.ArgumentException("Input system is not observable");
+                // Compute Observability 
+                return true;
+
             }
-
-        }
-
-        public bool Observable(double[,] matrixA, double[,] matrixC)
-        {
-            // Compute Observability 
-            return true;
-
         }
     }
 }
