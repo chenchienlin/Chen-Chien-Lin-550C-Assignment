@@ -12,6 +12,7 @@
  *                 thus using Complex Number namespace to fulfill their needs.                         *          
  *******************************************************************************************************/
 
+
 /***************************************** USING NAMESPACES ********************************************/
 using ChenChienLin550CAssignment8ComplexNumber;
 
@@ -19,6 +20,12 @@ namespace ChenChienLin550CAssignment8Controller
 {
     public class StateEstimator
     {
+        /*==========================================================================
+         * Function:   Observer
+         * Arguments:  Two double matrices and One ComplexNumber vector
+         * Returns:    One double matrix
+         */
+
         public double[,] Observer(double[,] matrixA, double[,] matrixC,
             ComplexNumber[] poleLocation)
         {
@@ -31,14 +38,18 @@ namespace ChenChienLin550CAssignment8Controller
                 //Use specified pole location to compute state estimator gain matrix L
                 double[,] L = new double[rowNumber, colNumber];
                 return L;
-
             }
             else
             {
                 throw new System.ArgumentException("Input system is not observable");
             }
-
         }
+
+        /*==========================================================================
+         * Function:   Observable
+         * Arguments:  Two double matrices
+         * Returns:    One boolean
+         */
 
         public bool Observable(double[,] matrixA, double[,] matrixC)
         {
@@ -48,3 +59,4 @@ namespace ChenChienLin550CAssignment8Controller
         }
     }
 }
+

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
-    <ProjectGuid>{1A899E55-1F6C-488D-A918-2BC213FCEAE2}</ProjectGuid>
+    <ProjectGuid>{D3A6522F-1C35-4608-99E4-FB3E00D01D84}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ChenChienLin550CAssignment8</RootNamespace>
     <AssemblyName>ChenChienLin550CAssignment8</AssemblyName>
@@ -34,12 +34,13 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChenChienLin550CAssignment8ComplexNumber\ChenChienLin550CAssignment8ComplexNumber.csproj">
-      <Project>{784CDB47-E5A4-463C-90D5-551B0FD5D62D}</Project>
-      <Name>ChenChienLin550CAssignment8ComplexNumber</Name>
-    </ProjectReference>
+    <Compile Include="SSModel.cs" />
+    <Compile Include="CTModel.cs" />
+    <Compile Include="DTModel.cs" />
+    <Compile Include="StateEstimator.cs" />
+    <Compile Include="StateEFeedBack.cs" />
+    <Compile Include="ComplexNumber.cs" />
+    <Compile Include="Simulator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

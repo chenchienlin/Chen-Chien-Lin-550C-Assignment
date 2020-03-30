@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
-    <ProjectGuid>{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}</ProjectGuid>
+    <ProjectGuid>{C330BD24-4F1C-4E76-A28F-A155A2459F05}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ChenChienLin550CAssignment8Controller</RootNamespace>
     <AssemblyName>ChenChienLin550CAssignment8Controller</AssemblyName>
@@ -38,7 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChenChienLin550CAssignment8ComplexNumber\ChenChienLin550CAssignment8ComplexNumber.csproj">
-      <Project>{99912C49-BAE0-4EE2-B600-00734EB6FFD6}</Project>
+      <Project>{C55E3B0E-9775-4560-9993-619BD318732B}</Project>
       <Name>ChenChienLin550CAssignment8ComplexNumber</Name>
     </ProjectReference>
   </ItemGroup>

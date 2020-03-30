@@ -12,13 +12,22 @@
  *                 thus using Complex Number namespace to fulfill their needs.                         *          
  *******************************************************************************************************/
 
+
 /***************************************** USING NAMESPACES ********************************************/
+using ChenChienLin550CAssignment8Model;
 using ChenChienLin550CAssignment8ComplexNumber;
 
 namespace ChenChienLin550CAssignment8Controller
 {
     public class StateFeedBack
     {
+
+        /*==========================================================================
+         * Function:   PolePlacement
+         * Arguments:  Two double matrices and One ComplexNumber vector
+         * Returns:    One double matrix
+         */
+
         public double[,] PolePlacement(double[,] matrixA, double[,] matrixB,
             ComplexNumber[] newPoleLocation)
         {
@@ -33,15 +42,40 @@ namespace ChenChienLin550CAssignment8Controller
             //Use new pole location to compute State feedback gain matrix K
             double[,] K = new double[rowNumber, colNumber];
             return K;
-
-
         }
 
+        /*==========================================================================
+         * Function:   Controllable
+         * Arguments:  Two double matrices
+         * Returns:    One boolean
+         */
 
         public bool Controllable(double[,] matrixA, double[,] matrixB)
         {
-            // Compute Contrallablity 
+            // Compute Contrallablity
             return true;
+        }
+
+
+        public double[,] CTModelAutoTune(SSModel model)
+        {
+            if (model.GetType() == typeof(CTModel))
+            {
+                ComplexNumber[] poles = model.PoleLocation();
+
+                for (int i = 0; i < poles.GetLength(1); i++)
+                {
+                    if (poles[i].RealPart > 0)
+                        poles[i] = new ComplexNumber(-1 * poles[i].RealPart, poles[i].ImaginaryPart);
+                }
+
+                double[,] K = PolePlacement(model.MatrixA, model.MatrixB, poles);
+                return K;
+            }
+            else
+                throw new System.ArgumentException("Input model must be a" +
+                    "continuous time model!");
+
         }
     }
 }

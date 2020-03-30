@@ -16,75 +16,80 @@
  *                 An instance of Simulator is created to simulate the step response of a system.      *
  *******************************************************************************************************/
 
+
 /***************************************** USING NAMESPACES ********************************************/
+using System;
+using ChenChienLin550CAssignment8Model;
+using ChenChienLin550CAssignment8Simulator;
+using ChenChienLin550CAssignment8Controller;
+using ChenChienLin550CAssignment8ComplexNumber;
 
 namespace ChenChienLin550CAssignment8
 {
-
-    namespace ChenChienLin550CAssignment8Program
+    static class Program
     {
-        static class Program
+        static void Main(string[] args)
         {
-            /// <summary>
-            /// The main entry point for the application.
-            /// </summary>
-            static void Main(string[] args)
-            {
-                double[,] matrixA = new double[2, 2];
-                matrixA[0, 0] = 1; matrixA[0, 1] = 0;
-                matrixA[1, 0] = 0; matrixA[1, 1] = 1;
+            // Create A, B, C, D matrices
+            double[,] matrixA = new double[2, 2];
+            matrixA[0, 0] = 1; matrixA[0, 1] = 0;
+            matrixA[1, 0] = 0; matrixA[1, 1] = 1;
 
-                double[,] matrixB = new double[2, 1];
-                matrixB[0, 0] = 1; matrixB[1, 0] = 0;
+            double[,] matrixB = new double[2, 1];
+            matrixB[0, 0] = 1; matrixB[1, 0] = 0;
 
-                double[,] matrixC = new double[1, 2];
-                matrixC[0, 0] = 1; matrixC[0, 1] = 0;
+            double[,] matrixC = new double[1, 2];
+            matrixC[0, 0] = 1; matrixC[0, 1] = 0;
 
-                double[,] matrixD = new double[1, 1];
-                matrixD[0, 0] = 0;
+            double[,] matrixD = new double[1, 1];
+            matrixD[0, 0] = 0;
 
-                //ContinousTimeStateSpaceSystem ctSystem =
-                //    new ContinousTimeStateSpaceSystem(matrixA, matrixB, matrixC, matrixD);
+            // Create a continuous time system
+            CTModel ctSystem =
+                new CTModel(matrixA, matrixB, matrixC, matrixD);
 
-                //// Define sampling time
-                //double ts = 0.01d;
-                //// Transfer continuous time system to discrete time system
-                //DiscreteTimeStateSpaceSystem dtSystem = ctSystem.ToDiscreteTimeSystem(ts);
+            // Define sampling time
+            double ts = 0.01d;
 
-                //// Define a complex number array
-                //ComplexNumber[] newPoleLocation = new ComplexNumber[matrixA.GetLength(1)];
+            Console.WriteLine(ctSystem.GetType());
+            Console.ReadKey();
 
-                //// Place new poles to 0.5 + 0.5j and 0.5 - 0.5j
-                //newPoleLocation[0] = new ComplexNumber(0.5, 0.5);
-                //newPoleLocation[1] = new ComplexNumber(0.5, -0.5);
+            // Transfer continuous time system to discrete time system
+            DTModel dtSystem = ctSystem.ToDiscreteTimeSystem(ts);
 
-                //// Create a state feed back controller
-                //StateFeedBack stateFeedBack = new StateFeedBack();
+            // Define a complex number array
+            ComplexNumber[] newPoleLocation = new ComplexNumber[matrixA.GetLength(1)];
 
-                //// Calculate state feed back gain
-                //double[,] K = stateFeedBack.PolePlacement(matrixA, matrixB, newPoleLocation);
+            // Place new poles to 0.5 + 0.5j and 0.5 - 0.5j
+            newPoleLocation[0] = new ComplexNumber(0.5, 0.5);
+            newPoleLocation[1] = new ComplexNumber(0.5, -0.5);
 
-                //// Simulate the closed loop step response
-                //Simulator simulator = new Simulator();
-                //simulator.ClosedStepResponse(ctSystem, K);
+            // Create a state feed back controller
+            StateFeedBack stateFeedBack = new StateFeedBack();
+
+            // Calculate state feed back gain
+            double[,] K = stateFeedBack.PolePlacement(matrixA, matrixB, newPoleLocation);
+
+            // Simulate the closed loop step response
+            Simulator simulator = new Simulator();
+            simulator.ClosedStepResponse(ctSystem, K);
 
 
-                //// Define a complex number array
-                //ComplexNumber[] estPoleLocation = new ComplexNumber[matrixA.GetLength(1)];
+            // Define a complex number array
+            ComplexNumber[] estPoleLocation = new ComplexNumber[matrixA.GetLength(1)];
 
-                //// Place poles to 5 + 1j and 5 - 1j
-                //estPoleLocation[0] = new ComplexNumber(5, 1);
-                //estPoleLocation[1] = new ComplexNumber(5, -1);
+            // Place poles to 5 + 1j and 5 - 1j
+            estPoleLocation[0] = new ComplexNumber(5, 1);
+            estPoleLocation[1] = new ComplexNumber(5, -1);
 
-                //// Create a state estimator
-                //StateEstimator stateEstimator = new StateEstimator();
+            // Create a state estimator
+            StateEstimator stateEstimator = new StateEstimator();
 
-                //// Calculate state feed back gain
-                //double[,] L = stateEstimator.Observer(matrixA, matrixC, estPoleLocation);
+            // Calculate state feed back gain
+            double[,] L = stateEstimator.Observer(matrixA, matrixC, estPoleLocation);
 
-                ////Simulate the closed loop step response for observer based state feedback system
-                //simulator.StateFeedBackEstimatorStepResponse(ctSystem, K, L);
-            }
+            //Simulate the closed loop step response for observer based state feedback system
+            simulator.StateFeedBackEstimatorStepResponse(ctSystem, K, L);
         }
     }
 }

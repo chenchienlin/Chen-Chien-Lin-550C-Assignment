@@ -1,5 +1,0 @@
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8ComplexNumber/obj/Debug/ChenChienLin550CAssignment8ComplexNumber.csprojAssemblyReference.cache
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8ComplexNumber/bin/Debug/ChenChienLin550CAssignment8ComplexNumber.exe
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8ComplexNumber/bin/Debug/ChenChienLin550CAssignment8ComplexNumber.pdb
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8ComplexNumber/obj/Debug/ChenChienLin550CAssignment8ComplexNumber.exe
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8ComplexNumber/obj/Debug/ChenChienLin550CAssignment8ComplexNumber.pdb

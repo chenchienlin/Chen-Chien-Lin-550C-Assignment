@@ -1,11 +1,12 @@
-﻿
+﻿using System;
+
 namespace ChenChienLin550CAssignment8ComplexNumber
 {
-    class Program
+    class MainClass
     {
         public static void Main(string[] args)
         {
-
+            Console.WriteLine("Hello World!");
         }
     }
 }

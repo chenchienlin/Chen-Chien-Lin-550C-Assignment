@@ -1,5 +1,10 @@
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.csprojAssemblyReference.cache
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.exe
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.pdb
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.exe
-/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.pdb
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.csprojAssemblyReference.cache
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.exe
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.pdb
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.exe
+/Users/jack/Projects/ChenChienLin550CAssignment8/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.pdb
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8_new/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.exe
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8_new/ChenChienLin550CAssignment8/bin/Debug/ChenChienLin550CAssignment8.pdb
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8_new/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.csprojAssemblyReference.cache
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8_new/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.exe
+/Users/jack/Documents/GitHub/Chen-Chien-Lin-550C-Assignment/ChenChienLin550CAssignment8_new/ChenChienLin550CAssignment8/obj/anycpu/Debug/ChenChienLin550CAssignment8.pdb
