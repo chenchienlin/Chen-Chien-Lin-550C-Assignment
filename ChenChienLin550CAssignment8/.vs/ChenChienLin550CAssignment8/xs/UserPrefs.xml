@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{1A899E55-1F6C-488D-A918-2BC213FCEAE2}|Default">
+  <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment8 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment8Simulator FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChenChienLin550CAssignment8Controller/StateEstimator.cs">
+    <Files>
+      <File FileName="ChenChienLin550CAssignment8Controller/StateEstimator.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ChenChienLin550CAssignment8" expanded="True">
+            <Node name="ChenChienLin550CAssignment8" expanded="True" />
+            <Node name="ChenChienLin550CAssignment8ComplexNumber" expanded="True" />
+            <Node name="ChenChienLin550CAssignment8Controller" expanded="True">
+              <Node name="StateEstimator.cs" selected="True" />
+            </Node>
+            <Node name="ChenChienLin550CAssignment8Model" expanded="True" />
+            <Node name="ChenChienLin550CAssignment8Simulator" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment8Controller FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment8ComplexNumber PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment8Model FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{1A899E55-1F6C-488D-A918-2BC213FCEAE2}" ItemName="ChenChienLin550CAssignment8" ConfigurationId="Default" />
+        <StartupItem ItemId="{784CDB47-E5A4-463C-90D5-551B0FD5D62D}" ItemName="ChenChienLin550CAssignment8ComplexNumber" ConfigurationId="Default" />
+        <StartupItem ItemId="{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}" ItemName="ChenChienLin550CAssignment8Controller" ConfigurationId="Default" />
+        <StartupItem ItemId="{36AF1998-D6EF-409D-820A-BA95BE8244AE}" ItemName="ChenChienLin550CAssignment8Model" ConfigurationId="Default" />
+        <StartupItem ItemId="{70548479-DFD0-488D-8651-1695C8270880}" ItemName="ChenChienLin550CAssignment8Simulator" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+</Properties>

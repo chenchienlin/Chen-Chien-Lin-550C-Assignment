@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{1A899E55-1F6C-488D-A918-2BC213FCEAE2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ChenChienLin550CAssignment8</RootNamespace>
+    <AssemblyName>ChenChienLin550CAssignment8</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <IntermediateOutputPath>obj\anycpu\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <IntermediateOutputPath>obj\anycpu\Release</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChenChienLin550CAssignment8ComplexNumber\ChenChienLin550CAssignment8ComplexNumber.csproj">
+      <Project>{784CDB47-E5A4-463C-90D5-551B0FD5D62D}</Project>
+      <Name>ChenChienLin550CAssignment8ComplexNumber</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChenChienLin550CAssignment8Controller\ChenChienLin550CAssignment8Controller.csproj">
+      <Project>{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}</Project>
+      <Name>ChenChienLin550CAssignment8Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChenChienLin550CAssignment8Model\ChenChienLin550CAssignment8Model.csproj">
+      <Project>{36AF1998-D6EF-409D-820A-BA95BE8244AE}</Project>
+      <Name>ChenChienLin550CAssignment8Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChenChienLin550CAssignment8Simulator\ChenChienLin550CAssignment8Simulator.csproj">
+      <Project>{70548479-DFD0-488D-8651-1695C8270880}</Project>
+      <Name>ChenChienLin550CAssignment8Simulator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

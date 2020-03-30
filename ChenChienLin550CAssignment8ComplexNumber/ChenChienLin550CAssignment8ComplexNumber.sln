@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment8ComplexNumber", "ChenChienLin550CAssignment8ComplexNumber\ChenChienLin550CAssignment8ComplexNumber.csproj", "{64E4F680-217E-4536-AE7C-45E0D3792848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment8Controller", "ChenChienLin550CAssignment8Controller\ChenChienLin550CAssignment8Controller.csproj", "{27066BFC-C48C-4CFF-96D6-CE680D5C715C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64E4F680-217E-4536-AE7C-45E0D3792848}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{64E4F680-217E-4536-AE7C-45E0D3792848}.Debug|anycpu.Build.0 = Debug|anycpu
+		{64E4F680-217E-4536-AE7C-45E0D3792848}.Release|anycpu.ActiveCfg = Release|anycpu
+		{64E4F680-217E-4536-AE7C-45E0D3792848}.Release|anycpu.Build.0 = Release|anycpu
+		{27066BFC-C48C-4CFF-96D6-CE680D5C715C}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{27066BFC-C48C-4CFF-96D6-CE680D5C715C}.Debug|anycpu.Build.0 = Debug|anycpu
+		{27066BFC-C48C-4CFF-96D6-CE680D5C715C}.Release|anycpu.ActiveCfg = Release|anycpu
+		{27066BFC-C48C-4CFF-96D6-CE680D5C715C}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal

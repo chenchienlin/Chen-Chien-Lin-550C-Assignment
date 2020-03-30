@@ -1,0 +1,41 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment8ComplexNumber", "ChenChienLin550CAssignment8ComplexNumber\ChenChienLin550CAssignment8ComplexNumber.csproj", "{784CDB47-E5A4-463C-90D5-551B0FD5D62D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment8Controller", "ChenChienLin550CAssignment8Controller\ChenChienLin550CAssignment8Controller.csproj", "{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment8Model", "ChenChienLin550CAssignment8Model\ChenChienLin550CAssignment8Model.csproj", "{36AF1998-D6EF-409D-820A-BA95BE8244AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment8Simulator", "ChenChienLin550CAssignment8Simulator\ChenChienLin550CAssignment8Simulator.csproj", "{70548479-DFD0-488D-8651-1695C8270880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChenChienLin550CAssignment8", "ChenChienLin550CAssignment8\ChenChienLin550CAssignment8.csproj", "{1A899E55-1F6C-488D-A918-2BC213FCEAE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{784CDB47-E5A4-463C-90D5-551B0FD5D62D}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{784CDB47-E5A4-463C-90D5-551B0FD5D62D}.Debug|anycpu.Build.0 = Debug|anycpu
+		{784CDB47-E5A4-463C-90D5-551B0FD5D62D}.Release|anycpu.ActiveCfg = Release|anycpu
+		{784CDB47-E5A4-463C-90D5-551B0FD5D62D}.Release|anycpu.Build.0 = Release|anycpu
+		{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}.Debug|anycpu.Build.0 = Debug|anycpu
+		{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}.Release|anycpu.ActiveCfg = Release|anycpu
+		{8C0E3BA6-926A-42A6-9D81-088135D5E9C5}.Release|anycpu.Build.0 = Release|anycpu
+		{36AF1998-D6EF-409D-820A-BA95BE8244AE}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{36AF1998-D6EF-409D-820A-BA95BE8244AE}.Debug|anycpu.Build.0 = Debug|anycpu
+		{36AF1998-D6EF-409D-820A-BA95BE8244AE}.Release|anycpu.ActiveCfg = Release|anycpu
+		{36AF1998-D6EF-409D-820A-BA95BE8244AE}.Release|anycpu.Build.0 = Release|anycpu
+		{70548479-DFD0-488D-8651-1695C8270880}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{70548479-DFD0-488D-8651-1695C8270880}.Debug|anycpu.Build.0 = Debug|anycpu
+		{70548479-DFD0-488D-8651-1695C8270880}.Release|anycpu.ActiveCfg = Release|anycpu
+		{70548479-DFD0-488D-8651-1695C8270880}.Release|anycpu.Build.0 = Release|anycpu
+		{1A899E55-1F6C-488D-A918-2BC213FCEAE2}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{1A899E55-1F6C-488D-A918-2BC213FCEAE2}.Debug|anycpu.Build.0 = Debug|anycpu
+		{1A899E55-1F6C-488D-A918-2BC213FCEAE2}.Release|anycpu.ActiveCfg = Release|anycpu
+		{1A899E55-1F6C-488D-A918-2BC213FCEAE2}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
