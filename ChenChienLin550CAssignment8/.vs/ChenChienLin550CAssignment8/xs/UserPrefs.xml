@@ -3,13 +3,13 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="ChenChienLin550CAssignment8/DTModel.cs">
     <Files>
       <File FileName="ChenChienLin550CAssignment8/Program.cs" Line="20" Column="23" />
-      <File FileName="ChenChienLin550CAssignment8/CTModel.cs" Line="20" Column="27" />
-      <File FileName="ChenChienLin550CAssignment8/StateEFeedBack.cs" Line="15" Column="1" />
-      <File FileName="ChenChienLin550CAssignment8/StateEstimator.cs" Line="58" Column="1" />
-      <File FileName="ChenChienLin550CAssignment8/ComplexNumber.cs" Line="23" Column="1" />
+      <File FileName="ChenChienLin550CAssignment8/CTModel.cs" />
+      <File FileName="ChenChienLin550CAssignment8/StateEFeedBack.cs" />
+      <File FileName="ChenChienLin550CAssignment8/StateEstimator.cs" />
+      <File FileName="ChenChienLin550CAssignment8/ComplexNumber.cs" />
       <File FileName="ChenChienLin550CAssignment8/DTModel.cs" Line="21" Column="39" />
-      <File FileName="ChenChienLin550CAssignment8/Simulator.cs" Line="45" Column="10" />
-      <File FileName="ChenChienLin550CAssignment8/SSModel.cs" Line="45" Column="38" />
+      <File FileName="ChenChienLin550CAssignment8/Simulator.cs" />
+      <File FileName="ChenChienLin550CAssignment8/SSModel.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
