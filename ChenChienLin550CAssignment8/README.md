@@ -1,6 +1,6 @@
-# Chen-Chien-Lin-MECH 550C-Assignment 6
+# Chen-Chien-Lin-MECH 550C-Assignment 8
 
-This project is for MECH 550C Assignment 6
+This project is for MECH 550C Assignment 8
 * Name : Chen_Chien Lin
 * Student Number : 46205175
 
