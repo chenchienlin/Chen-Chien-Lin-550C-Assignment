@@ -9,7 +9,33 @@ This project is for MECH 550C Assignment 8
 * [.NET Core 3.1](https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows)
 
 ## Assignment Requirement
-a. Anobjecthasastate(highlightencapsulationwheremutabledataabout the object are stored within your class).
+a. An object has a state (high lighten capsulation where mutable data about the object are stored within your class).
+
+SSModel Class is an abstract class and defines four protected fields which can only be initiated in its constructor.
+
+b.	An object decides what happens to it in response to an outside stimulus (e.g. a public method changes the object’s state). 
+
+In DTModel Class, SetSamplingTime method provides users a way to change the sampling time, accordingly, change the A, B, C, D matrices based on the given sampling time.
+
+c.	An object hides some of its internal details (state) from the outside world (e.g. private variables). 
+
+Fields in SSModel, CTModel, and DTModel Class can only be accessed by the getters. 
+
+d.	Two objects of the same type are used interchangeably in some piece of code (e.g. iterate through and act upon a list of ComplexNumbers objects). This effect can be described with comments rather than code. 
+
+In StateFeedBack Class, AutoTune method, it needs an instance of SSModel Class as an argument. The process will calculate the pole locations of the given model and store as a ComplexNumber vector, then moving all unstable poles to left hand plane, and then calculate the state feedback gain.  
+
+e.	Two objects of different types are used interchangeably in some piece of code (demonstrate polymorphism). This effect can be described with comments rather than code. 
+
+Almost all methods in StateFeedBack, StateEstimator, and Simulator Classes use an instance of SSModel Class as an argument, thus, all child classes of SSModel(In this case, CTModel, DTModel) can use methods in StateFeedBack, StateEstimator, and Simulator Classes.
+
+f.	An object presents itself as two different types (e.g. casting from one type to another, or a derived class stored in a base class variable, used to override a method).
+
+An instance of CTModel Class can either use methods which use a SSModel object as an argument, or use methods need a CTModel object as an argument.
+Ex: OpenStepResponse(SSModel system), CTModelAutoTune(CTModel model)
+
+
+
 
 ## Description
 
