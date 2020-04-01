@@ -9,9 +9,6 @@ This project is for MECH 550C Assignment 8
 * [.NET Core 3.1](https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows)
 
 ## Description
-* A class is created to specify some features of complex number(ComplexNuber Class).
-* A Student class is define and has one field.
-* In program class, one **List, Stack, LinkedList, and Dictionary** are created to store instances of **Book Class**. One **Queue** is created to store the instances of **Student Class**.
 
 ### ComplexNumber Class
 1. There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
@@ -63,6 +60,14 @@ The concepts of these four methods between CTModel and DTModel are very similar.
 2. OpenStepResponse method provides two signatures, users can either use state space model or transfer function to simulate open loop step response of the system.
 3. ClosedStepResponse is to simulate the closed loop response of the system. 
 4. StateFeedBackEstimatorStepResponse is to simulate the system connect to observe based state feedback contoller.  
+
+### Program Class 
+1. In this class, other four namespaces are used to demonstrate the process of designing a controller and state estimator of a state space model. 
+2. ContinousTimeStateSpaceSystem class is created to initiate a state space sysyem.
+3. Instances of ComplexNumber class are the desired pole location of the system.    
+4. An instance of StateFeedBack is created to move system poles to desired position. 
+5. An instance of StateEstimator is created to estimate states of system. 
+6. An instance of Simulator is created to simulate the step response of a system.  
 
 ## Author
 * Chen_Chien Lin
