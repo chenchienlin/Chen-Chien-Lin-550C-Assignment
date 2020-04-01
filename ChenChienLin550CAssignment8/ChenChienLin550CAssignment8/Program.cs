@@ -51,8 +51,6 @@ namespace ChenChienLin550CAssignment8
             // Define sampling time
             double ts = 0.01d;
 
-            Console.WriteLine(ctSystem.GetType());
-            Console.ReadKey();
 
             // Transfer continuous time system to discrete time system
             DTModel dtSystem = ctSystem.ToDiscreteTimeSystem(ts);
@@ -68,12 +66,18 @@ namespace ChenChienLin550CAssignment8
             StateFeedBack stateFeedBack = new StateFeedBack();
 
             // Calculate state feed back gain
-            double[,] K = stateFeedBack.PolePlacement(matrixA, matrixB, newPoleLocation);
+            double[,] Kc = stateFeedBack.PolePlacement(ctSystem, newPoleLocation);
+            double[,] Kd = stateFeedBack.PolePlacement(dtSystem, newPoleLocation);
 
-            // Simulate the closed loop step response
+            // Calculate AutoTune state feed back gain
+            //double[,] Kc2 = stateFeedBack.CTModelAutoTune(ctSystem);
+
+            //Simulate the closed loop step response
             Simulator simulator = new Simulator();
-            simulator.ClosedStepResponse(ctSystem, K);
+            simulator.ClosedStepResponse(ctSystem, Kc);
+            simulator.ClosedStepResponse(dtSystem, Kd);
 
+            //simulator.ClosedStepResponse(ctSystem, K2);
 
             // Define a complex number array
             ComplexNumber[] estPoleLocation = new ComplexNumber[matrixA.GetLength(1)];
@@ -86,10 +90,15 @@ namespace ChenChienLin550CAssignment8
             StateEstimator stateEstimator = new StateEstimator();
 
             // Calculate state feed back gain
-            double[,] L = stateEstimator.Observer(matrixA, matrixC, estPoleLocation);
+            double[,] Lc = stateEstimator.Observer(ctSystem, estPoleLocation);
+            double[,] Ld = stateEstimator.Observer(dtSystem, estPoleLocation);
+
 
             //Simulate the closed loop step response for observer based state feedback system
-            simulator.StateFeedBackEstimatorStepResponse(ctSystem, K, L);
+            simulator.StateFeedBackEstimatorStepResponse(ctSystem, Kc, Lc);
+            simulator.StateFeedBackEstimatorStepResponse(dtSystem, Kd, Ld);
+
+            Console.ReadKey();
         }
     }
 }

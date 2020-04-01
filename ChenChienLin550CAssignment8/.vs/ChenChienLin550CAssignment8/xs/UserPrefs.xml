@@ -1,22 +1,23 @@
 ﻿<Properties StartupConfiguration="{D3A6522F-1C35-4608-99E4-FB3E00D01D84}|Default">
   <MonoDevelop.Ide.ItemProperties.ChenChienLin550CAssignment8 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ChenChienLin550CAssignment8/DTModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChenChienLin550CAssignment8/Program.cs">
     <Files>
-      <File FileName="ChenChienLin550CAssignment8/Program.cs" Line="20" Column="23" />
-      <File FileName="ChenChienLin550CAssignment8/CTModel.cs" />
-      <File FileName="ChenChienLin550CAssignment8/StateEFeedBack.cs" />
-      <File FileName="ChenChienLin550CAssignment8/StateEstimator.cs" />
-      <File FileName="ChenChienLin550CAssignment8/ComplexNumber.cs" />
-      <File FileName="ChenChienLin550CAssignment8/DTModel.cs" Line="21" Column="39" />
-      <File FileName="ChenChienLin550CAssignment8/Simulator.cs" />
-      <File FileName="ChenChienLin550CAssignment8/SSModel.cs" />
+      <File FileName="ChenChienLin550CAssignment8/Program.cs" Line="1" Column="1" />
+      <File FileName="ChenChienLin550CAssignment8/Simulator.cs" Line="1" Column="1" />
+      <File FileName="ChenChienLin550CAssignment8/SSModel.cs" Line="1" Column="1" />
+      <File FileName="ChenChienLin550CAssignment8/StateEstimator.cs" Line="1" Column="1" />
+      <File FileName="ChenChienLin550CAssignment8/StateEFeedBack.cs" Line="69" Column="41" />
+      <File FileName="ChenChienLin550CAssignment8/CTModel.cs" Line="1" Column="1" />
+      <File FileName="ChenChienLin550CAssignment8/ComplexNumber.cs" Line="2" Column="20" />
+      <File FileName="ChenChienLin550CAssignment8/DTModel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ChenChienLin550CAssignment8" expanded="True">
             <Node name="ChenChienLin550CAssignment8" expanded="True">
-              <Node name="DTModel.cs" selected="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -24,7 +25,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|anycpu" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -6,7 +6,7 @@
  * Purpose:        Define the features of a state feedback controller                                  *
  *                                                                                                     *
  * Description:    In the C# script, StateFeedBack class is defined.                                   *
- *                 One method two methods are defined in this class to calculate the                   *
+ *                 One method is defined in this class to calculate the                                *
  *                 state feedback gain of a given system.                                              *
  *                 Users might want to have complex number poles to make a system oscillate a bit,     *
  *                 thus using Complex Number namespace to fulfill their needs.                         *          
@@ -28,19 +28,26 @@ namespace ChenChienLin550CAssignment8Controller
          * Returns:    One double matrix
          */
 
-        public double[,] PolePlacement(double[,] matrixA, double[,] matrixB,
-            ComplexNumber[] newPoleLocation)
+        public double[,] PolePlacement(SSModel system, ComplexNumber[] newPoleLocation)
         {
-            int rowNumber = matrixA.GetLength(1);
-            int colNumber = matrixB.GetLength(0);
+            // Define local variables
+            int rowNumber = system.MatrixA.GetLength(1);
+            int colNumber = system.MatrixB.GetLength(0);
 
-            if (!Controllable(matrixA, matrixB))
+            // Check stability
+            if(!system.EigenValueStability())
+                throw new System.ArgumentException("Input system is not stable");
+
+            // Check controllability
+            if (!Controllable(system.MatrixA, system.MatrixB))
                 throw new System.ArgumentException("Input system is not controllable");
-
-
 
             //Use new pole location to compute State feedback gain matrix K
             double[,] K = new double[rowNumber, colNumber];
+            for (int i = 0; i < K.GetLength(1); i++)
+                for (int j = 0; j < K.GetLength(1); j++)
+                    K[i, j] = 1d;
+
             return K;
         }
 
@@ -56,26 +63,32 @@ namespace ChenChienLin550CAssignment8Controller
             return true;
         }
 
+        /*==========================================================================
+         * Function:   CTModelAutoTune
+         * Arguments:  one CTModel
+         * Returns:    One double matrix
+         */
 
-        public double[,] CTModelAutoTune(SSModel model)
+        public double[,] CTModelAutoTune(CTModel model)
         {
-            if (model.GetType() == typeof(CTModel))
+            // Define local variables
+            ComplexNumber[] poles = model.PoleLocation();
+
+            // Move unstable poles to L.H.P.
+            for (int i = 0; i < poles.GetLength(1); i++)
             {
-                ComplexNumber[] poles = model.PoleLocation();
-
-                for (int i = 0; i < poles.GetLength(1); i++)
-                {
-                    if (poles[i].RealPart > 0)
-                        poles[i] = new ComplexNumber(-1 * poles[i].RealPart, poles[i].ImaginaryPart);
-                }
-
-                double[,] K = PolePlacement(model.MatrixA, model.MatrixB, poles);
-                return K;
+                if (poles[i].RealPart > 0)
+                    poles[i] = new ComplexNumber(-1 * poles[i].RealPart, poles[i].ImaginaryPart);
             }
-            else
-                throw new System.ArgumentException("Input model must be a" +
-                    "continuous time model!");
 
+            // Calculate state feedback gain
+            double[,] K = PolePlacement(model, poles);
+            for (int i = 0; i < K.GetLength(1); i++)
+                for (int j = 0; j < K.GetLength(1); j++)
+                    K[i, j] = 1d;
+
+            // Return state feedback gain
+            return K;
         }
     }
 }

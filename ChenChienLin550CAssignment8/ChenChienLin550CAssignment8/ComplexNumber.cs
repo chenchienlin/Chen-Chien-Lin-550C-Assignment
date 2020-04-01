@@ -1,5 +1,5 @@
 ﻿/*******************************************************************************************************
- * Assignment 8  :  ChenChienLin550CAssignment8ComplexNumber__ComplexNumber Class                      *
+ * Assignment 8  : ChenChienLin550CAssignment8ComplexNumber__ComplexNumber Class                      *
  *                                                                                                     *
  * Name:           Chen-Chien Lin                                                                      *
  * Student Number: 46205175                                                                            *

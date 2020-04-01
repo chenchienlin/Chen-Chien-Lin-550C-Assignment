@@ -76,6 +76,8 @@ namespace ChenChienLin550CAssignment8Model
 
             // Compute pole location
             ComplexNumber[] poleLocation = new ComplexNumber[poleNumber];
+            for (int i = 0; i < poleNumber; i++)
+                poleLocation[i] = new ComplexNumber(1, 0);
 
             // Return the pole vector
             return poleLocation;
