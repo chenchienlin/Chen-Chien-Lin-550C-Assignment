@@ -11,11 +11,11 @@ This project is for MECH 550C Assignment 8
 ## Assignment Requirement
 a. An object has a state (high lighten capsulation where mutable data about the object are stored within your class).
 
-</td>SSModel Class is an abstract class and defines four protected fields which can only be initiated in its constructor.</td>
+   SSModel Class is an abstract class and defines four protected fields which can only be initiated in its constructor.
 
 b.	An object decides what happens to it in response to an outside stimulus (e.g. a public method changes the object’s state). 
 
-</td>In DTModel Class, SetSamplingTime method provides users a way to change the sampling time, accordingly, change the A, B, C, D matrices based on the given sampling time.</td>
+   In DTModel Class, SetSamplingTime method provides users a way to change the sampling time, accordingly, change the A, B, C, D matrices based on the given sampling time.</td>
 
 c.	An object hides some of its internal details (state) from the outside world (e.g. private variables). 
 
