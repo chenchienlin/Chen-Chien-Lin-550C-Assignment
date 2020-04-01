@@ -32,6 +32,7 @@ Almost all methods in StateFeedBack, StateEstimator, and Simulator Classes use a
 f.	An object presents itself as two different types (e.g. casting from one type to another, or a derived class stored in a base class variable, used to override a method).
 
 An instance of CTModel Class can either use methods which use a SSModel object as an argument, or use methods need a CTModel object as an argument.
+
 Ex: OpenStepResponse(SSModel system), CTModelAutoTune(CTModel model)
 
 
