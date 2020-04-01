@@ -17,7 +17,7 @@ This project is for MECH 550C Assignment 8
 4. A destructor is defined to show message while an instance is destructed in Debug mode.
 5. No Fields are created for the magnitude and phase of a complex number.
 6. Users cannot set a complex number by using its magnitude and phase,
-   but can get the magnitue and phase of one existing complex number by two getters.
+   but can get the magnitude and phase of one existing complex number by two getters.
 7. **Tostring** method inherited from the Object class is overrided to print the specific format for complex numbers.    
 8. Operators + - * are overloaded in this class, users can use these operators to calculate complex numbers directly.
 
@@ -40,30 +40,30 @@ The concepts of these four methods between CTModel and DTModel are very similar.
 1. DTModel Class is derived from SSModel Class and defines the features of discrete time state space model.
 2. The constructor of this class is based on SSModel Class, but sampling time needs to be provided.
 3. BIBOStability method is used to check whether all the poles of the system are in the unit disk of the z plane.
-4. EigenValueStability(Asympototically stable) method is used to check whether the realparts of all the eigenvalues of a given system A matrix are less than one.
+4. EigenValueStability(Asympototically stable) method is used to check whether the real parts of all the eigenvalues of a given system A matrix are less than one.
 5. LyapunovStability method is to solve lyapunov equation: A^TA - P = -Q. The system is stable if P is positive definite.
 6. PoleLocation method is to calculate system poles in z plane.
 
 ### StateFeedBack Class
 1. This class is a helper class, and there is no field defined in this class.
 2. Poleplacement method is to calculate state feedback gain of a given system.
-3. CTModelAutoTune method is to calculte a statefeed gain of a given system, but users do not need to enter new pole locations. This method is to move all the unstable poles of the system to the open left hand plane by iterating through all poles of the system.
+3. CTModelAutoTune method is to calculate a statefeed gain of a given system, but users do not need to enter new pole locations. This method is to move all the unstable poles of the system to the open left hand plane by iterating through all poles of the system.
 4. Controllable method is to determine whether the system is controllable by checking the rank of controllablity matrix.
 
 ### StateEstimator Class
 1. This class is a helper class, and there is no field defined in this class.
 2. Observer method is to calculate state estimator gain of a given system.
-3. Obervable method is to determine whether the system is observale by checking the rank of observability matrix.
+3. Observable method is to determine whether the system is observable by checking the rank of observability matrix.
 
 ### Simulator Class
 1. This class is a helper class, and there is no field defined in this class.
 2. OpenStepResponse method provides two signatures, users can either use state space model or transfer function to simulate open loop step response of the system.
 3. ClosedStepResponse is to simulate the closed loop response of the system. 
-4. StateFeedBackEstimatorStepResponse is to simulate the system connect to observe based state feedback contoller.  
+4. StateFeedBackEstimatorStepResponse is to simulate the system connect to observe based state feedback controller.  
 
 ### Program Class 
 1. In this class, other four namespaces are used to demonstrate the process of designing a controller and state estimator of a state space model. 
-2. ContinousTimeStateSpaceSystem class is created to initiate a state space sysyem.
+2. ContinousTimeStateSpaceSystem class is created to initiate a state space system.
 3. Instances of ComplexNumber class are the desired pole location of the system.    
 4. An instance of StateFeedBack is created to move system poles to desired position. 
 5. An instance of StateEstimator is created to estimate states of system. 
