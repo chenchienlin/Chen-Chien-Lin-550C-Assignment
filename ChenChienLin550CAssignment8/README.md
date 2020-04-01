@@ -31,7 +31,7 @@ This project is for MECH 550C Assignment 8
 4. Four abstract methods are defined, which are BIBOStability, EigenValueStability, LyapunovStability, PoleLocation. 
 The concepts of these four methods between CTModel and DTModel are very similar. However, due to the calculation process is a little different, CTModel Class and DTModel Class need to customize these four methods.
 
-### CTModel Class
+#### CTModel Class
 1. CTModel Class is derived from SSModel Class and defines the features of continuous time state space model.
 2. The constructor of this class is based on SSModel Class.
 3. BIBOStability method is used to check whether all the poles of the system are in the open left half of the complex plane.
@@ -39,7 +39,7 @@ The concepts of these four methods between CTModel and DTModel are very similar.
 5. LyapunovStability method is to solve lyapunov equation: A^TP + PA = -Q. The system is stable if P is positive definite.
 6. PoleLocation method is to calculate system poles in s plane.
 
-### CTModel Class
+#### DTModel Class
 1. DTModel Class is derived from SSModel Class and defines the features of discrete time state space model.
 2. The constructor of this class is based on SSModel Class, but sampling time needs to be provided.
 3. BIBOStability method is used to check whether all the poles of the system are in the unit disk of the z plane.
@@ -47,24 +47,22 @@ The concepts of these four methods between CTModel and DTModel are very similar.
 5. LyapunovStability method is to solve lyapunov equation: A^TA - P = -Q. The system is stable if P is positive definite.
 6. PoleLocation method is to calculate system poles in z plane.
 
-### Program Class
+### StateFeedBack Class
+1. This class is a helper class, and there is no field defined in this class.
+2. Poleplacement method is to calculate state feedback gain of a given system.
+3. CTModelAutoTune method is to calculte a statefeed gain of a given system, but users do not need to enter new pole locations. This method is to move all the unstable poles of the system to the open left hand plane by iterating through all poles of the system.
+4. Controllable method is to determine whether the system is controllable by checking the rank of controllablity matrix.
 
-1. **List**
-A **List** is created to store **Book** objects. One benefit of using list is that  it does not need to specify its size at first and an object can be added/removed in a list any time. On the other hand, the size of an array needs to be defined at first, and it would be very expensive to resize an array. In this example, book objects might be added or removed very frequently in real life, thus using **List** is more reasonable.
+### StateEstimator Class
+1. This class is a helper class, and there is no field defined in this class.
+2. Observer method is to calculate state estimator gain of a given system.
+3. Obervable method is to determine whether the system is observale by checking the rank of observability matrix.
 
-2. **Queue**
-**Queue** implements **First In First Out** concept. For examples, customers waiting in lines for services, needs of the first customer should be satisfied first. In this example, **Student** objects are added in the queue. The first student in the queue can get the book earlier.
-
-3. **Stack**
-**Stack** be used to deal with schedule problems. In this example, a bookStack object is created to represent a book store. 
-Once the bookstore buys books, they are stored in stack. By using **Stack** customers can know the latest book in the book store.
-
-4. **LinkedList**
-**LinkedList** is preferable when need to insert or remove element in the middle of the list. In this example, a list represents rank of books  is created. Sometimes, users might only want to read new books. In this case, a new rank can be created by removing old books from the **LinkedList** .
-
-5. **Dictionary**
-If users want to just look up a value using a key, then using **Dictionary** would be better.  In this example, users can find out book title and whether it is in the bookstore.
-
+### Simulator Class
+1. This class is a helper class, and there is no field defined in this class.
+2. OpenStepResponse method provides two signatures, users can either use state space model or transfer function to simulate open loop step response of the system.
+3. ClosedStepResponse is to simulate the closed loop response of the system. 
+4. StateFeedBackEstimatorStepResponse is to simulate the system connect to observe based state feedback contoller.  
 
 ## Author
 * Chen_Chien Lin
