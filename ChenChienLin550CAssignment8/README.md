@@ -12,7 +12,7 @@ This project is for MECH 550C Assignment 8
 
 ### ComplexNumber Class
 1. There are two private fields in Complex Number class, real part and imaginary part of a complex number, respectively.
-2. Fields can be get by two getters, but there is no setter for these two fields.
+2. Fields can be got by two getters, but there is no setter for these two fields.
 3. The real part and imaginary part of a complex number can only be defined once by its constructor.
 4. A destructor is defined to show message while an instance is destructed in Debug mode.
 5. No Fields are created for the magnitude and phase of a complex number.
