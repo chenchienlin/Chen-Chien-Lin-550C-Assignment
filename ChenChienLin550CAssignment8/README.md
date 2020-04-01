@@ -8,6 +8,9 @@ This project is for MECH 550C Assignment 8
 * [Visual Studio](https://visualstudio.microsoft.com/downloads)
 * [.NET Core 3.1](https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows)
 
+## Assignment Requirement
+a. Anobjecthasastate(highlightencapsulationwheremutabledataabout the object are stored within your class).
+
 ## Description
 
 ### ComplexNumber Class
